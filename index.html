@@ -97,6 +97,18 @@
       height: 100%;
       z-index: -1;
     }
+
+  
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: 4px solid #fff;
+    z-index: 1;
+  }
+</style>
+
   </style>
 </head>
 <body class="light-mode">
@@ -216,7 +228,7 @@
                 <img src="images/c3.PNG" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="color: #0e0e0e;">Links</h5>
-                  <a href="https://sreeraj-patnaik.github.io/sample/" class="btn btn-primary mx-2 mb-2">Visit Site</a>
+                  <a href="https://sreeraj-patnaik.github.io/Classroom-Website/" class="btn btn-primary mx-2 mb-2">Visit Site</a>
                 </div>
               </div>
             </div>
@@ -269,71 +281,98 @@
       <div class="progress-bar bg-secondary" style="width: 90%">90%</div>
     </div>
   </div>
-</section>
-<section id="timeline" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <h2 class="text-center mb-4">Education & Work Timeline</h2>
-  <div class="timeline" style="position: relative; max-width: 900px; margin: 0 auto; padding: 2rem 0;">
-    
-    <!-- Vertical line -->
-    <div style="content: ''; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 4px; background-color: #3498db;"></div>
-
-    <!-- Timeline Items -->
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
-      <div style="position: absolute; top: 20px; left: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>May 2024</h5>
-      <p>Assumed role of "Editor-In-Chief" of The LWC</p>
+  <section id="timeline" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h2 class="text-center mb-4">Education & Work Timeline</h2>
+    <div class="timeline" style="position: relative; max-width: 900px; margin: 0 auto; padding: 2rem 0;">
+  
+      <!-- Vertical center line -->
+      <div style="content: ''; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 4px; background-color: #3498db;"></div>
+  
+      <!-- Always visible timeline items -->
+      <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
+        <div class="timeline-dot" style="position: absolute; top: 20px; left: -10px;"></div>
+        <h5>May 2024</h5>
+        <p>Assumed role of "Editor-In-Chief" of The LWC</p>
+      </div>
+  
+      <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
+        <div class="timeline-dot" style="position: absolute; top: 20px; right: -10px;"></div>
+        <h5>January 2025</h5>
+        <p>Completed First Semester of my BTech with 9.7 CGPA</p>
+      </div>
+  
+      <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
+        <div class="timeline-dot" style="position: absolute; top: 20px; left: -10px;"></div>
+        <h5>December 2024</h5>
+        <p>Selected as an Interim President for the Lendi Write Club</p>
+      </div>
+  
+      <!-- Expandable hidden timeline -->
+      <div id="more-timeline" style="display: none;">
+        <!-- Alternate sides below -->
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; right: -10px;"></div>
+          <h5>October 2024</h5>
+          <p>Awarded First in District-level Poetry Competition by SETWEZ</p>
+        </div>
+  
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; left: -10px;"></div>
+          <h5>2024</h5>
+          <p>Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
+        </div>
+  
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; right: -10px;"></div>
+          <h5>2022</h5>
+          <p>Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
+        </div>
+  
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; left: -10px;"></div>
+          <h5>2019</h5>
+          <p>Awarded First in Essay Writing Competition</p>
+        </div>
+  
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; right: -10px;"></div>
+          <h5>2018</h5>
+          <p>Awarded by SGV-Palasa for Recitation of "100 Telugu Padyalu"</p>
+        </div>
+  
+        <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
+          <div class="timeline-dot" style="position: absolute; top: 20px; left: -10px;"></div>
+          <h5>2006</h5>
+          <p>First Cry</p>
+        </div>
+      </div>
+  
+      <!-- Show More Button -->
+      <div class="text-center mt-4">
+        <button onclick="toggleTimeline()" class="btn btn-primary">Show More</button>
+      </div>
     </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
-      <div style="position: absolute; top: 20px; right: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>January 2025</h5>
-      <p>Completed First Semester of my BTech with 9.7 CGPA</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
-      <div style="position: absolute; top: 20px; right: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>December 2024</h5>
-      <p>Selected as an Interim President for the Lendi Write Club</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
-      <div style="position: absolute; top: 20px; left: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>October 2024</h5>
-      <p>Awarded First in District-level Poetry Competition by SETWEZ on behalf of Central Govt.</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
-      <div style="position: absolute; top: 20px; right: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>2024</h5>
-      <p>Completed Intermediate with Distinction in Sri Chaitanya Jr College (RB-1), Visakhapatnam</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
-      <div style="position: absolute; top: 20px; left: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>2022</h5>
-      <p>Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
-      <div style="position: absolute; top: 20px; right: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>2019</h5>
-      <p>Awarded First in Essay Writing Competition, Received The Holy Bhagavad Gita</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 50%; text-align: left;">
-      <div style="position: absolute; top: 20px; left: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>2018</h5>
-      <p>Awarded by SGV-Palasa for Recitation of "100 Telugu Padyalu"</p>
-    </div>
-
-    <div class="timeline-item" style="position: relative; width: 50%; padding: 1rem 2rem; left: 0; text-align: right;">
-      <div style="position: absolute; top: 20px; right: -10px; width: 20px; height: 20px; border-radius: 50%; background-color: #3498db; border: 4px solid #fff; z-index: 1;"></div>
-      <h5>2006</h5>
-      <p>First Cry</p>
-    </div>
-  </div>
-</section>
-<br> <br> <br> 
+  </section>
+  
+  <script>
+    let expanded = false;
+    function toggleTimeline() {
+      const more = document.getElementById("more-timeline");
+      const btn = event.target;
+      if (expanded) {
+        more.style.display = "none";
+        btn.textContent = "Show More";
+      } else {
+        more.style.display = "block";
+        btn.textContent = "Show Less";
+      }
+      expanded = !expanded;
+    }
+  </script>
+  
+  
+  </section>
+  <br> <br> <br> 
 
 <section id="certifications" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1;">
   <h2 class="text-center mb-4" style="font-size: 2.2rem;">Certifications</h2>
@@ -430,5 +469,17 @@
     spaceBetween: 30,
     centeredSlides: true,
   });
+
+  
+  const toggleBtn = document.getElementById('toggle-btn');
+  const moreTimeline = document.getElementById('more-timeline');
+
+  toggleBtn.addEventListener('click', () => {
+    const isHidden = moreTimeline.style.display === 'none';
+    moreTimeline.style.display = isHidden ? 'block' : 'none';
+    toggleBtn.textContent = isHidden ? 'Show Less' : 'Show More';
+  });
 </script>
+
+
 
