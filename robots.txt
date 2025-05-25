@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sreeraj-patnaik.github.io/sitemap.xml
