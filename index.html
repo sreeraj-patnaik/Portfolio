@@ -54,59 +54,7 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
-    .timeline {
-      position: relative;
-      padding: 2rem 0;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: #ccc;
-    }
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      padding: 1rem;
-    }
-    .timeline-item-left {
-      left: 0;
-      text-align: right;
-    }
-    .timeline-item-right {
-      left: 50%;
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      top: 1rem;
-      width: 12px;
-      height: 12px;
-      background: #007bff;
-      border-radius: 50%;
-      left: -6px;
-    }
-    .dark-mode .timeline::before { background: #555; }
-    .dark-mode .timeline-item::after { background: #00bcd4; }
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-  
-  .timeline-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #3498db;
-    border: 4px solid #fff;
-    z-index: 1;
-  }
+    
 </style>
 
   </style>
@@ -284,29 +232,33 @@
       <div class="progress-bar bg-secondary" style="width: 90%">90%</div>
     </div>
   </div>
-  <section id="timeline" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <h2 class="text-center mb-4">Education & Work Timeline</h2>
-    <div class="timeline" style="position: relative; max-width: 900px; margin: 0 auto; padding: 2rem 0;">
-      
-      <!-- Vertical center line -->
-      <div class="timeline-line"></div>
-  
-      <!-- Timeline items -->
-      <div class="timeline-item left">
+
+
+
+
+
+  <section id="timeline" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 700px; margin: auto;">
+    <h2 class="text-center mb-5">Education & Work Timeline</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
         <div class="timeline-content">
           <h5>May 2024</h5>
           <p>Assumed role of "Editor-In-Chief" of The LWC</p>
         </div>
       </div>
-  
-      <div class="timeline-item right">
+      
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
         <div class="timeline-content">
           <h5>January 2025</h5>
           <p>Completed First Semester of my BTech with 9.7 CGPA</p>
         </div>
       </div>
   
-      <div class="timeline-item left">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
         <div class="timeline-content">
           <h5>December 2024</h5>
           <p>Selected as an Interim President for the Lendi Write Club</p>
@@ -314,129 +266,136 @@
       </div>
   
       <div id="more-timeline" style="display: none;">
-        <div class="timeline-item right">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>October 2024</h5>
             <p>Awarded First in District-level Poetry Competition by SETWEZ</p>
           </div>
         </div>
-  
-        <div class="timeline-item left">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>2024</h5>
             <p>Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
           </div>
         </div>
-  
-        <div class="timeline-item right">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>2022</h5>
             <p>Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
           </div>
         </div>
-  
-        <div class="timeline-item left">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>2019</h5>
             <p>Awarded First in Essay Writing Competition</p>
           </div>
         </div>
-  
-        <div class="timeline-item right">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>2018</h5>
             <p>Awarded by SGV-Palasa for Recitation of "100 Telugu Padyalu"</p>
           </div>
         </div>
-  
-        <div class="timeline-item left">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h5>2006</h5>
             <p>First Cry</p>
           </div>
         </div>
       </div>
+    </div>
   
-      <!-- Show More Button -->
-      <div class="text-center mt-4">
-        <button onclick="toggleTimeline()" class="btn btn-primary">Show More</button>
-      </div>
+    <div class="text-center mt-4">
+      <button id="toggle-btn" class="btn btn-primary" onclick="toggleTimeline()">Show More</button>
     </div>
   </section>
   
   <style>
-    .timeline-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4px;
-      background-color: #3498db;
-      z-index: 0;
+    .timeline {
+      position: relative;
+      margin-left: 30px;
+      padding-left: 20px;
+      border-left: 4px solid #3498db;
     }
   
     .timeline-item {
       position: relative;
-      width: 50%;
-      padding: 1.5rem 2rem;
-      box-sizing: border-box;
+      margin-bottom: 2.5rem;
     }
   
-    .timeline-item::before {
-      content: '';
+    .timeline-dot {
       position: absolute;
-      top: 20px;
+      left: -14px;
+      top: 5px;
       width: 16px;
       height: 16px;
       background-color: #0e0e0e;
       border: 4px solid #3498db;
       border-radius: 50%;
-      z-index: 3;
-    }
-  
-    .timeline-item.left {
-      left: 0;
-      text-align: right;
-    }
-  
-    .timeline-item.left::before {
-      right: -8px;
-    }
-  
-    .timeline-item.right {
-      left: 50%;
-      text-align: left;
-    }
-  
-    .timeline-item.right::before {
-      left: -8px;
+      box-shadow: 0 0 8px #3498db;
     }
   
     .timeline-content {
-      position: relative;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1rem;
-      border-radius: 8px;
+      background: rgba(255 255 255 / 0.05);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    .timeline-content h5 {
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+      color: #3498db;
+    }
+    .timeline-content p {
+      margin: 0;
+      color: #ddd;
     }
   
-    @media (max-width: 768px) {
-      .timeline-item {
+    .timeline-content:hover {
+      background: rgba(52, 152, 219, 0.2);
+    }
+  
+    /* Button */
+    .btn-primary {
+      background-color: #3498db;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+    }
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+  
+    /* Responsive */
+    @media (max-width: 600px) {
+      .timeline {
+        margin-left: 20px;
+        border-left-width: 3px;
+      }
+      .timeline-dot {
+        left: -12px;
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+        box-shadow: 0 0 6px #3498db;
+      }
+      .timeline-content {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+      }
+      .btn-primary {
         width: 100%;
-        text-align: left !important;
-        padding-left: 2rem;
-        padding-right: 0;
-      }
-  
-      .timeline-item.left,
-      .timeline-item.right {
-        left: 0;
-      }
-  
-      .timeline-item::before {
-        left: 0 !important;
-        right: auto !important;
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -444,19 +403,18 @@
   <script>
     let expanded = false;
     function toggleTimeline() {
-      const more = document.getElementById("more-timeline");
-      const btn = event.target;
+      const more = document.getElementById('more-timeline');
+      const btn = document.getElementById('toggle-btn');
       if (expanded) {
-        more.style.display = "none";
-        btn.textContent = "Show More";
+        more.style.display = 'none';
+        btn.textContent = 'Show More';
       } else {
-        more.style.display = "block";
-        btn.textContent = "Show Less";
+        more.style.display = 'block';
+        btn.textContent = 'Show Less';
       }
       expanded = !expanded;
     }
   </script>
-  
   <br> <br> <br> 
 
 <section id="certifications" class="container py-5" data-aos="fade-up" style="background-color: #0e0e0e; color: #f1f1f1;">
@@ -556,14 +514,6 @@
   });
 
   
-  const toggleBtn = document.getElementById('toggle-btn');
-  const moreTimeline = document.getElementById('more-timeline');
-
-  toggleBtn.addEventListener('click', () => {
-    const isHidden = moreTimeline.style.display === 'none';
-    moreTimeline.style.display = isHidden ? 'block' : 'none';
-    toggleBtn.textContent = isHidden ? 'Show Less' : 'Show More';
-  });
 </script>
 
 
