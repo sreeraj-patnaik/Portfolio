@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="google-site-verification" content="hiogXl8bX2Xjbgb1b8JiC9C1OK2QiCzd3gIG3wRUyu4" />
+    <meta name="google-site-verification" content="1vZv4AOEO4q7-22OD7JjMfGFNGTx3bf-e8P-dVadRdU" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Editor-In-Chief @ LWC, Developer,  Student, and Writer. View my projects, skills, and resume.">
+  <meta name="keywords" content="Sreeraj Dabbiru, portfolio, developer, student, LWC, LIET, full stack, projects, poetry, editor">
+  <meta name="author" content="Sreeraj Dabbiru">
+  <meta name="robots" content="index, follow">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Sreeraj  Dabbiru | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  <style>
+     
+ 
+.btn-primary {
+  background-color:#ffc107;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+     
+   
+    
+    .profile-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+      border-left: 3px solid #0d6dfd;
+      margin-left: 1rem;
+    }
+    .timeline-item {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -9px;
+      background-color: #0d6efd;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+    }
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    a {
+      color: #0b3d91;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    /* Sidebar */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100vh;
+      background: #0b3d91;
+      padding: 2rem 1.5rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    #sidebar.collapsed {
+      transform: translateX(-100%);
+    }
+    #sidebar img.profile-pic {
+      display: block;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 4px solid #ffc107;
+    }
+    #sidebar h2 {
+      text-align: center;
+      margin: 0.25rem 0 0.5rem;
+      font-size: 1.8rem;
+      color: #ffc107;
+    }
+    #sidebar p.bio {
+      text-align: center;
+      font-style: italic;
+      font-size: 1rem;
+      margin: 0 0 1.5rem;
+      color: #ffffff;
+    }
+    #sidebar nav a {
+      display: block;
+      color: #ffc107;
+      margin: 0.75rem 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    #sidebar nav a:focus,
+    #sidebar nav a:hover {
+      background-color: #ff0707;
+      outline: none;
+    }
+
+    /* Sidebar Toggle Button */
+    #sidebarToggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: #0b3d91;
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    #sidebarToggle:hover,
+    #sidebarToggle:focus {
+      background-color: #09417e;
+      outline: none;
+    }
+    #sidebarToggle svg {
+      width: 24px;
+      height: 24px;
+      stroke: white;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    /* Main Content */
+    main {
+      margin-left: 280px;
+      padding: 2rem 3rem;
+      transition: margin-left 0.3s ease;
+      max-width: 900px;
+      margin-right: auto;
+      margin-bottom: 4rem;
+    }
+    main.expanded {
+  margin-left: 0;
+  padding: 2rem 1.5rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+    /* Section styling */
+    section {
+      margin-bottom: 3.5rem;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      color: #0b3d91;
+      border-bottom: 3px solid #ffc107;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.2rem;
+    }
+    section p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    /* Skills */
+    #skills div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    #skills .skill {
+      background: #ffc107;
+      color: #0b3d91;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+
+    /* Projects cards */
+    #projects .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    #projects .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    #projects .card:hover,
+    #projects .card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      outline: none;
+    }
+    #projects .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 4px solid #ffc107;
+    }
+    #projects .card-body {
+      padding: 1rem 1.3rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    #projects .card-title {
+      margin: 0 0 0.6rem;
+      font-size: 1.4rem;
+      color: #0b3d91;
+    }
+    #projects .card-text {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    #projects .btn-link {
+      align-self: flex-start;
+      background: #0b3d91;
+      color: white;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    #projects .btn-link:hover,
+    #projects .btn-link:focus {
+      background-color: #09417e;
+      outline: none;
+    }
+
+    /* Gallery grid */
+    #gallery .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    #gallery .gallery-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #gallery .gallery-item:hover,
+    #gallery .gallery-item:focus-within {
+      transform: scale(1.05);
+      outline: none;
+    }
+    
+    
+    #gallery .caption {
+      padding: 0.4rem 0;
+      font-weight: 600;
+      color: #0b3d91;
+      font-size: 1rem;
+      text-align: center;
+    }
+    #viewMoreBtn {
+      margin-top: 1.8rem;
+      padding: 0.7rem 1.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0b3d91;
+      border: 2px solid #0b3d91;
+      background: transparent;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #viewMoreBtn:hover,
+    #viewMoreBtn:focus {
+      background-color: #ffc107;
+      outline: none;
+    }
+
+    /* Contact */
+    #contact a {
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      #sidebar {
+        transform: translateX(-100%);
+      }
+      #sidebar.collapsed {
+        transform: translateX(0);
+      }
+      main {
+        margin-left: 0;
+        padding: 2rem 1.5rem;
+      }
+      main.expanded {
+        margin-left: 280px;
+        padding: 2rem 3rem;
+      }
+    }
+    @media (max-width: 576px) {
+      #sidebar {
+        width: 220px;
+        padding: 1.8rem 1rem;
+      }
+      #sidebar img.profile-pic {
+        width: 110px;
+        height: 110px;
+      }
+      main.expanded {
+        margin-left: 220px;
+      }
+    }
+    .custom-navbar {
+  background-color:#0b3d91; /* Your custom hex/rgb color */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white !important;  /* Adjust text color for contrast */
+}
+.gallery-img {
+  width: 100%;
+  max-height: 400px;   /* increased from 300px */
+  object-fit: contain; /* to show the whole image */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+    
+    .card {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" aria-label="Sidebar Navigation">
+    <img
+      src="images/profyl.jpeg"
+      alt="Portrait photo of Sreeraj Dabbiru"
+      class="profile-pic"
+      loading="lazy"
+    />
+    <h2>Sreeraj Dabbiru</h2>
+    <p class="bio">
+        "Editor-In-Chief @ LWC | BTech UnderGrad LIET’28 | CSSE Dept | C, Python, HTML, CSS | Aspiring Full-Stack Developer | Class Representative | Communicator | Winner, Dist Poetry Competition – Yuva Utsav 2024 | Writer"
+    </p>
+    <nav role="navigation" aria-label="Main Navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebarToggle" aria-label="Toggle Sidebar">
+    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+  </button>
+
+  <!-- Main Content -->
+
+
+  <main id="mainContent">
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sreeraj Dabbiru</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#skills" tabindex="-1" aria-disabled="true">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects" tabindex="-1" aria-disabled="true">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery" tabindex="-1" aria-disabled="true">gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+<br>
+    
+      
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/District-winner-eenadu-newspaper-cutout.jpeg" class="d-block w-100" alt="Cutout of EENADU newspaper of 2 January 2025, Featuring Sreeraj Dabbiru, Poetry winner in Yuva Utsav ">
+           
+          </div>
+          <div class="carousel-item">
+            <img src="images/lendi-write-club-newsletter-presentation.jpeg" class="d-block w-100" alt="Launching of our first Newsletter by Dr VV Ramareddy Sir, Principal of LIET. Mentor Prof Revathi G, President Jyothsna A, Sreeraj Dabbiru - Editor-in-Chief and other members Participated ">
+           
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  
+   <!-- About Me Section -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <center>
+            <img src="images/profyl.jpeg" alt="My photo" class="profile-img" style="border-radius: 50px ; width: 150px; height: auto;">
+        </center>
+        </div>
+      <div class="col-md-8">
+        <h2>About Me</h2>
+        <p>
+            I am <strong>Sreeraj Dabbiru</strong>, an undergraduate pursuing a B.Tech in Computer Science and Systems Engineering at LIET, Class of 2028. Alongside my academic pursuits, I hold the position of Editor-In-Chief at LWC, where I combine leadership with strategic communication to drive meaningful engagement.
+          </p>
+          <p>
+            Proficient in languages such as C, Python, HTML, and CSS, I am steadily advancing toward full-stack development expertise and expanding my knowledge in Machine Learning. I view technology as a vital tool for addressing complex real-world challenges, with a focus on crafting intuitive and impactful digital solutions.
+          </p>
+          <p>
+            Beyond my technical endeavors, I am a recognized winner of the District Poetry Competition – Yuva Utsav 2024. This accomplishment underscores my unique ability to blend technical precision with creative expression, a balance I intentionally cultivate in all forms of communication.
+          </p>
+          <p>
+            As a class representative, I prioritize collaboration, leadership, and empathy, striving to foster environments of mutual growth. My commitment is to continuous learning, personal evolution, and meaningful contribution within every community I engage.
+          </p>      </div>
+    </div>
+  </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Python</span>
+        <span class="skill">C</span>
+        <span class="skill">Bootstrap</span>
+        <span class="skill">Numpy</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">DS & Problem solving</span>
+
+
+
+      </div>
+    </section>
+ <!-- Timeline Section -->
+ <section class="container my-5">
+    <h2 class="mb-4">My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p>May 2025 - Assumed Reins as The Editor-in-Chief of the LWC</p>
+      </div>
+      <div class="timeline-item">
+        <p>Jan 2025 - Completed First Semester of my BTech with 9.7 CGPA</p>
+      </div>
+      <div class="timeline-item">
+        <p>Dec 2024 -
+            Selected as an Interim President for the Lendi Write Club</p>
+      </div>
+      <div class="timeline-item">
+        <p>Oct 2024 - 
+            Awarded First in District-level Poetry Competition by SETWEZ</p>
+      </div>
+      <div class="timeline-item">
+        <p>May 2024 - 
+            Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
+      </div>
+      <div class="timeline-item">
+        <p>May 2022 - 
+            Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
+     
+    </div>
+  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="row">
+        <div class="card">
+          <img src="images/c2.PNG" alt="Project screenshot">
+          <div class="card-body">
+            <h3 class="card-title">Hogwarts Website</h3>
+            <p class="card-text">A Website for fictional Hogwarts School of Witchcraft and Wizardry</p>
+            <a href="#" class="btn-link">View Project</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/h2.PNG" alt="Project screenshot">
+          <div class="card-body">
+            <h3 class="card-title">A Mock Classroom Website</h3>
+            <p class="card-text">A mock Website for CSSE Classroom Updates</p>
+            <a href="#" class="btn-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="container py-5">
+        <h1 class="text-center mb-4" data-aos="fade-up">Photo Gallery</h1>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">A collection of memorable moments, creative works, and event highlights.</p>
+      
+        <div class="row g-4">
+      
+      
+           <!-- Photo 5 -->
+           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card">
+                <img src="images/img7.jpeg" alt="Sreeraj Dabbiru's Photo with Dr G Sateesh Reddy, former DRDO chairperson" class="gallery-img">
+                <div class="card-body">
+                  <h5 class="card-title">With Dr G Sateesh sir</h5>
+                  <p class="card-text">With one of the greatest scientists and former chairperson of DRDO, Advisor to Defense Minister Dr G Sateesh Reddy sir</p>
+                </div>
+              </div>
+            </div>
+      
+             <!-- Photo 5 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card">
+                <img src="images/img9.jpeg" alt="Sreeraj Dabbiru Rendering his voice for The Lendi Radio Club" class="gallery-img">
+                <div class="card-body">
+                  <h5 class="card-title">Hosting Radio Show for LWC</h5>
+                  <p class="card-text">Rendering my voice for The Lendi Radio Club</p>
+                </div>
+              </div>
+            </div>
+      
+                 <!-- Photo 5 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card">
+                <img src="images/img10.jpeg" alt="Sreeraj Dabbiru Playing with Chemicals under careful supervision of faculty" class="gallery-img">
+                <div class="card-body">
+                  <h5 class="card-title">In the Engineering Chemistry Lab</h5>
+                  <p class="card-text">Playing with Chemicals under careful supervision of faculty.</p>
+                </div>
+              </div>
+            </div>
+      
+          <!-- Photo 1 -->
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="card">
+              <img src="images/img1.jpg" alt="Sreeraj Dabbiru after winning District First in YUVA UTSAV 2024" class="gallery-img">
+              <div class="card-body">
+                <h5 class="card-title">Yuva Utsav 2024</h5>
+                <p class="card-text">Capturing the moment after winning the District Poetry Competition.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Photo 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="images/img2.jpg" alt="Sreeraj Dabbiru in the Central Library of Lendi Institute of Engineering and Technology (LIET)" class="gallery-img">
+              <div class="card-body">
+                <h5 class="card-title">First time In the Central Library</h5>
+                <p class="card-text">Capturing every moment in the very beginning days of my BTech</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Photo 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="images/img4.jpeg" alt="Sreeraj Dabbiru Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy" class="gallery-img">
+              <div class="card-body">
+                <h5 class="card-title">Newsletter Launch</h5>
+                <p class="card-text">Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy.</p>
+              </div>
+            </div>
+          </div>
+      
+         
+      
+          <!-- Photo 5 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="images/img6.jpeg" alt="Sreeraj Dabbiru in Simhachalam Stepsway" class="gallery-img">
+              <div class="card-body">
+                <h5 class="card-title">Simhachalam</h5>
+                <p class="card-text">Lost in the Nature's Beauty at Simhachalam</p>
+              </div>
+            </div>
+          </div>
+      
+         
+      
+          <!-- Add more photos as needed -->
+        </div>
+      </div>
+      
+      <button id="viewMoreBtn">View More</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>You can  connect with me on <a href="https://www.linkedin.com/in/sreeraj-dabbiru-65bb28262/">LinkedIn</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sreeraj Dabbiru. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Sidebar Toggle and Fade-In -->
+  <script>
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.getElementById('mainContent');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+      main.classList.toggle('expanded');
+    });
+
+    // Fade-in animation
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeInElements.forEach(el => observer.observe(el));
+    
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
