@@ -437,4 +437,65 @@
   background-color:#ff0707;
 
 
+}
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.cert-card-tech{
+  min-width: 280px;
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background-color: #ffc107;
   
+}
+
+.cert-card-nontech{
+  min-width: 280px;
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background-color: #0b3d91;
+  color: white;
+}
+.cert-card:hover {
+  transform: scale(1.03);
+}
+.cert-icon {
+  font-size: 2rem;
+  color: #0b3d91;
+}
+
+
+  .btn-cert-tech {
+    background-color:#0b3d91 ; /* royal blue */
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+  .btn-cert-nontech {
+    background-color:#ffc107 ; /* royal blue */
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .btn-cert:hover {
+    background-color:#ff0707; /* slightly darker */
+    color: white;
+  }
+
