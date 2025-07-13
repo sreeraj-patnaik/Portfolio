@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTech with Sreeraj Dabbiru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --secondary-dark: #1e293b;
+            --accent-blue: #3b82f6;
+            --accent-orange: #f97316;
+            --accent-yellow: #fbbf24;
+            --accent-red: #ef4444;
+            --text-light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-scrolled {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--accent-orange);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+            background-color: var(--secondary-dark);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .playlist-card {
+            transition: all 0.3s ease;
+            background-color: rgba(30, 41, 59, 0.7);
+        }
+        
+        .playlist-card:hover {
+            background-color: rgba(30, 41, 59, 1);
+            transform: scale(1.02);
+        }
+        
+        .feature-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--accent-red);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background-color: var(--secondary-dark);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+            color: var(--accent-blue);
+        }
+        
+        .social-icon:hover {
+            color: var(--accent-orange);
+            transform: scale(1.2);
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: rgba(30,41,59,0.98);
+            width: 80vw;
+            max-width: 320px;
+            height: 100vh;
+            z-index: 100;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+            padding: 2rem 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #f8fafc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .mobile-menu a:hover {
+            color: var(--accent-orange);
+        }
+        .mobile-menu .close-btn {
+            font-size: 2rem;
+            color: #f8fafc;
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center">
+<img src="images/dp.jpeg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3" />            <h1 class="text-2xl font-bold">CodeTech<span class="text-orange-500">.</span></h1>
+        </div>
+        <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-orange-500 hover:text-white-500 transition">My Portfolio</a>
+
+            <a href="#home" class="text-white hover:text-orange-500 transition">Home</a>
+            <a href="#videos" class="text-white hover:text-orange-500 transition">Videos</a>
+            <a href="#playlists" class="text-white hover:text-orange-500 transition">Playlists</a>
+            <a href="#resources" class="text-white hover:text-orange-500 transition">Resources</a>
+            <a href="#about" class="text-white hover:text-orange-500 transition">About</a>
+        </div>
+        <div class="flex items-center space-x-4">
+    <a href="https://www.youtube.com/@sreeraj_dabbiru" target="_blank"
+       class="btn-primary px-4 py-2 rounded-full font-medium flex items-center">
+        <i class="fab fa-youtube mr-2"></i> Subscribe
+    </a>
+    <button id="mobile-menu-toggle" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <span class="close-btn" id="mobile-menu-close">&times;</span>
+        <a href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#playlists">Playlists</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+        <button class="btn-primary px-4 py-2 rounded-full font-medium flex items-center w-full justify-center">
+            <i class="fab fa-youtube mr-2"></i> Subscribe
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20 pb-16 px-6 md:px-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Learn to Code with <span class="text-orange-500">Sreeraj Dabbiru</span>
+                </h1>
+                <p class="text-xl mb-8 text-gray-300">
+                    Master programming concepts through our comprehensive tutorials and hands-on projects. Join our community of passionate developers!
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#videos" class="btn-primary px-6 py-3 rounded-full font-medium flex items-center">
+                        <i class="fas fa-play-circle mr-2"></i> Watch Videos
+                    </a>
+                    <a href="#playlists" class="btn-secondary px-6 py-3 rounded-full font-medium flex items-center">
+                        <i class="fas fa-code mr-2"></i> View Projects
+                    </a>
+                </div>
+              
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-64 h-64 rounded-full bg-orange-500 opacity-20 blur-3xl"></div>
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+                    <div class="relative bg-gradient-to-br from-blue-600 to-indigo-900 rounded-3xl overflow-hidden">
+                        <img src="https://placehold.co/800x500" alt="Sreeraj Dabbiru teaching coding concepts on screen with multiple monitors showing code" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition" onclick="window.open('https://youtu.be/00qQh2zfmL0?si=hRLIo2SnWKVWgPIs','_blank')">
+                                <i class="fas fa-play text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Videos Section -->
+<section id="videos" class="py-16 px-6 md:px-12 bg-secondary-dark">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Featured <span class="text-orange-500">Videos</span>
+            </h2>
+        </div>
+        <div id="featuredVideosGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+</section>
+<!-- Playlists Section -->
+<section id="playlists" class="py-16 px-6 md:px-12 bg-primary-dark">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Browse Our <span class="text-yellow-500">Playlists</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Organized collections of videos to help you learn systematically. Choose a playlist to begin your learning journey.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Playlist 1 -->
+            <div class="playlist-card rounded-lg overflow-hidden transition-all duration-300">
+                <div class="relative">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLMy6E2rGWJvWqWn7uQGCP0rO3j4R1KkOH"
+                            title="JavaScript Fundamentals Playlist" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                        <i class="fas fa-list mr-1"></i> 12 Videos
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">JavaScript Fundamentals</h3>
+                    <p class="text-gray-400 text-sm">Master the basics of JavaScript programming</p>
+                </div>
+            </div>
+            
+            <!-- Playlist 2 -->
+            <div class="playlist-card rounded-lg overflow-hidden transition-all duration-300">
+                <div class="relative">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLMy6E2rGWJvX8dR3fP1R2E3dN1T2Qn4kF"
+                            title="React Complete Guide Playlist" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                        <i class="fas fa-list mr-1"></i> 8 Videos
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">React Complete Guide</h3>
+                    <p class="text-gray-400 text-sm">Learn React from basics to advanced concepts</p>
+                </div>
+            </div>
+            
+            <!-- Playlist 3 -->
+            <div class="playlist-card rounded-lg overflow-hidden transition-all duration-300">
+                <div class="relative">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLMy6E2rGWJvYbK1P2F3R4E5dN6T7Qk8F"
+                            title="Node.js Backend Playlist" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                        <i class="fas fa-list mr-1"></i> 6 Videos
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Node.js Backend</h3>
+                    <p class="text-gray-400 text-sm">Build scalable backend services with Node</p>
+                </div>
+            </div>
+            
+            <!-- Playlist 4 -->
+            <div class="playlist-card rounded-lg overflow-hidden transition-all duration-300">
+                <div class="relative">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLMy6E2rGWJvDbK2F3R5E6dN7T8Qk9F"
+                            title="Database Design Playlist" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                        <i class="fas fa-list mr-1"></i> 10 Videos
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Database Design</h3>
+                    <p class="text-gray-400 text-sm">Learn SQL, NoSQL and database architecture</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <a href="#playlists" class="inline-block px-6 py-3 border-2 border-orange-500 text-orange-500 rounded-full font-medium hover:bg-orange-500 hover:text-white transition">
+                <i class="fas fa-th-large mr-2"></i> View All Playlists
+            </a>
+        </div>
+    </div>
+</section>
+   <!-- Resources Section -->
+    <section id="resources" class="py-16 px-6 md:px-12 bg-secondary-dark">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Video <span class="text-red-500">Resources</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Get the most out of our videos with accompanying source code, notes, and related materials.
+                </p>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Sidebar with video list -->
+                    <div class="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-gray-700">
+                        <div class="p-4 bg-gray-900">
+                            <input type="text" placeholder="Search videos..." class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" id="videoSearch">
+                        </div>
+                        <div class="overflow-y-auto" style="max-height: 500px;" id="videoListSidebar">
+                            <!-- Video list will be rendered here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Main content area with tabs -->
+                    <div class="w-full md:w-2/3">
+                        <div class="p-6" id="resourceContent">
+                            <!-- Dynamic resource content will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 md:px-12 bg-primary-dark">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-orange-500 shadow-lg">
+                            <img src="images/dp.jpeg" alt="Sreeraj Dabbiru smiling portrait in professional attire with blurred code background" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center shadow-lg">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        About <span class="text-orange-500">Sreeraj Dabbiru</span>
+                    </h2>
+                    <p class="text-gray-400 mb-6">
+                        Hi! I'm Sreeraj Dabbiru, a passionate techie with a little experience in web development and Machine Learning. Through CodeTech, I aim to share my knowledge and help aspiring developers master modern technologies.
+                    </p>
+                    <p class="text-gray-400 mb-6">
+                        My tutorials focus on practical, real-world examples rather than just theoretical concepts. I believe this approach helps students better understand how to apply their knowledge in professional settings.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="px-4 py-2 bg-gray-800 rounded-full flex items-center">
+                            <i class="fas fa-briefcase mr-2 text-blue-400"></i>
+                            <span class="text-sm">Student</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-800 rounded-full flex items-center">
+                            <i class="fas fa-graduation-cap mr-2 text-yellow-400"></i>
+                            <span class="text-sm">Computer Science </span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-800 rounded-full flex items-center">
+                            <i class="fas fa-globe mr-2 text-red-400"></i>
+                            <span class="text-sm">Youtube Content Creator</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <a href="#" class="social-icon text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <!-- <section class="py-16 px-6 md:px-12 bg-gradient-to-r from-blue-900 to-indigo-900">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Stay Updated with <span class="text-yellow-500">New Content</span>
+            </h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter and get notified about new tutorial releases, coding tips, and exclusive resources.
+            </p>
+            <form class="flex flex-col md:flex-row gap-3 max-w-xl mx-auto" onsubmit="newsletterSubscribe(event)">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" class="px-5 py-3 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 w-full" required>
+                <button type="submit" class="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition whitespace-nowrap">
+                    <i class="fas fa-paper-plane mr-2"></i> Subscribe
+                </button>
+            </form>
+            <div id="newsletterStatus" class="mt-4 text-green-400"></div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer py-12 px-6 md:px-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-orange-500 mr-3"></div>
+                        <h3 class="text-xl font-bold">CodeTech<span class="text-orange-500">.</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Learn programming with comprehensive tutorials and practical examples.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Videos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#videos" class="text-gray-400 hover:text-orange-500 transition">Latest Videos</a></li>
+                        <li><a href="#videos" class="text-gray-400 hover:text-orange-500 transition">Popular Videos</a></li>
+                        <li><a href="#videos" class="text-gray-400 hover:text-orange-500 transition">JavaScript</a></li>
+                        <li><a href="#videos" class="text-gray-400 hover:text-orange-500 transition">React.js</a></li>
+                        <li><a href="#videos" class="text-gray-400 hover:text-orange-500 transition">Node.js</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Playlists</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#playlists" class="text-gray-400 hover:text-orange-500 transition">Beginner Guides</a></li>
+                        <li><a href="#playlists" class="text-gray-400 hover:text-orange-500 transition">Project Tutorials</a></li>
+                        <li><a href="#playlists" class="text-gray-400 hover:text-orange-500 transition">Interview Prep</a></li>
+                        <li><a href="#playlists" class="text-gray-400 hover:text-orange-500 transition">Algorithm Series</a></li>
+                        <li><a href="#playlists" class="text-gray-400 hover:text-orange-500 transition">System Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#resources" class="text-gray-400 hover:text-orange-500 transition">Source Code</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-orange-500 transition">Video Notes</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-orange-500 transition">Cheat Sheets</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-orange-500 transition">Community</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-orange-500 transition">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">
+                    &copy; 2023 CodeTech with Sreeraj Dabbiru. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white transition">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script>
+     // --- Video Data: Update this array for new videos! ---
+const videosData = [
+  {
+    id: "WDjC9o26OYg",
+    youtubeId: "WDjC9o26OYg",
+    title: "Flask Tutorial in Telugu Video-1 || Server side and Client side || Backend using Python || Computech1",
+    description: "",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "j1oyiVwWAuY",
+    youtubeId: "j1oyiVwWAuY",
+    title: "Flask Tutorial in Telugu Video-2 | First Flask Website || Routes | Decorators |Backend using Python",
+    description: "",
+    playlist: "JavaScript Fundamentals",
+    resources: {
+      notes: `
+        <h4 class="font-bold text-lg mb-3">Key Concepts:</h4>
+        <ul class="list-disc pl-5 mb-6 space-y-2">
+          <li>Closures capture variables from their lexical scope</li>
+          <li>Useful for data privacy and factory functions</li>
+          <li>Common in callbacks and async code</li>
+        </ul>
+        <h4 class="font-bold text-lg mb-3">Common Pitfalls:</h4>
+        <ul class="list-disc pl-5 mb-6 space-y-2">
+          <li>Unexpected variable values in loops</li>
+          <li>Memory leaks from unused closures</li>
+        </ul>
+        <div class="bg-gray-900 p-4 rounded-lg">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white mr-2">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h5 class="font-bold">Pro Tip:</h5>
+          </div>
+          <p>Use closures to implement private variables and modular code patterns.</p>
+        </div>
+      `,
+      code: `
+        <div class="bg-gray-900 p-4 rounded-lg mb-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-sm text-gray-400">closures.js</span>
+            <button class="text-blue-400 hover:text-blue-300 text-sm" onclick="copyCode('closureCode')">
+              <i class="fas fa-copy mr-1"></i> Copy Code
+            </button>
+          </div>
+          <pre class="overflow-x-auto text-green-400 text-sm" id="closureCode">
+<code>function makeCounter() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+</code>
+          </pre>
+        </div>
+      `,
+      links: `
+        <div class="space-y-4">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" target="_blank" class="block p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition group">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white mr-3">
+                <i class="fab fa-js"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">MDN: Closures</h4>
+                <p class="text-sm text-gray-400 group-hover:text-gray-300">developer.mozilla.org</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://javascript.info/closure" target="_blank" class="block p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition group">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg bg-yellow-500 flex items-center justify-center text-white mr-3">
+                <i class="fas fa-book"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">JS.info: Closures</h4>
+                <p class="text-sm text-gray-400 group-hover:text-gray-300">javascript.info/closure</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      `
+    }
+  },
+  {
+    id: "yLqiPgJtdeM",
+    youtubeId: "yLqiPgJtdeM",
+    title: "Pointers in C || Video-1 || Introduction || Telugu || Sreeraj || #coding #clanguagetelugu",
+    description: "Description for Video 3",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "47uxTaDoAXM",
+    youtubeId: "47uxTaDoAXM",
+    title: "Bootstrap tutorial in Telugu | video-2| Complete bootstrap 5 tutorial #bootstrap #webdevelopment",
+    description: "Description for Video 4",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "00qQh2zfmL0",
+    youtubeId: "00qQh2zfmL0",
+    title: "How To Host a WEBSITE for FREE using github",
+    description: "Understanding useState, useEffect and custom hooks",
+    playlist: "React Complete Guide",
+    resources: {
+      notes: `
+        <h4 class="font-bold text-lg mb-3">Key Concepts:</h4>
+        <ul class="list-disc pl-5 mb-6 space-y-2">
+          <li>useEffect runs after every render by default</li>
+          <li>Dependency array controls when the effect runs</li>
+          <li>Cleanup functions prevent memory leaks</li>
+          <li>Multiple effects can be used to separate concerns</li>
+        </ul>
+        <h4 class="font-bold text-lg mb-3">Common Pitfalls:</h4>
+        <ul class="list-disc pl-5 mb-6 space-y-2">
+          <li>Missing dependencies can cause stale closures</li>
+          <li>Infinite loops when state updates trigger effects</li>
+          <li>Forgetting cleanup for subscriptions or timers</li>
+        </ul>
+        <div class="bg-gray-900 p-4 rounded-lg">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white mr-2">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h5 class="font-bold">Pro Tip:</h5>
+          </div>
+          <p>Use the React Developer Tools to inspect when effects run and what values they capture in their closures.</p>
+        </div>
+      `,
+      code: `
+        <div class="bg-gray-900 p-4 rounded-lg mb-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-sm text-gray-400">App.js</span>
+            <button class="text-blue-400 hover:text-blue-300 text-sm" onclick="copyCode('useEffectCode')">
+              <i class="fas fa-copy mr-1"></i> Copy Code
+            </button>
+          </div>
+          <pre class="overflow-x-auto text-green-400 text-sm" id="useEffectCode">
+<code>import React, { useState, useEffect } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  // Runs after every render
+  useEffect(() => {
+    document.title = \`You clicked \${count} times\`;
+  });
+  
+  // Runs only when count changes
+  useEffect(() => {
+    console.log('Count changed to:', count);
+    
+    // Cleanup function
+    return () => {
+      console.log('Cleaning up...');
+    };
+  }, [count]);
+  
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Counter;</code>
+          </pre>
+        </div>
+      `,
+      links: `
+        <div class="space-y-4">
+          <a href="https://react.dev/reference/react/useEffect" target="_blank" class="block p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition group">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center text-white mr-3">
+                <i class="fab fa-react"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Official React Docs: useEffect</h4>
+                <p class="text-sm text-gray-400 group-hover:text-gray-300">react.dev/reference/react/useEffect</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://blog.logrocket.com/guide-to-react-useeffect-hook/" target="_blank" class="block p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition group">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white mr-3">
+                <i class="fas fa-book"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Understanding useEffect Dependencies</h4>
+                <p class="text-sm text-gray-400 group-hover:text-gray-300">logrocket.com</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://medium.com/swlh/common-react-hooks-mistakes-8e92f34c2d34" target="_blank" class="block p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition group">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center text-white mr-3">
+                <i class="fab fa-medium"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Common useEffect Mistakes</h4>
+                <p class="text-sm text-gray-400 group-hover:text-gray-300">medium.com/swlh</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      `
+    }
+  },
+  {
+    id: "_7kolJB1JAo",
+    youtubeId: "_7kolJB1JAo",
+    title: "Bootstrap tutorial in Telugu | video-1 | Complete bootstrap 5 tutorial #bootstrap #webdevelopment",
+    description: "Description for Video 6",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "PpI8KouAKJs",
+    youtubeId: "PpI8KouAKJs",
+    title: "C- Language ట్యుటోరియల్స్ తెలుగు లో || QUALIFIERS PART 3",
+    description: "Description for Video 7",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "fvGoZ5jU0Ik",
+    youtubeId: "fvGoZ5jU0Ik",
+    title: "C- Language ట్యుటోరియల్స్ తెలుగు లో || PART 2",
+    description: "Description for Video 8",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "ylL9rebJYpk",
+    youtubeId: "ylL9rebJYpk",
+    title: "C- Language ట్యుటోరియల్స్ తెలుగు లో ||  PART 1",
+    description: "Description for Video 9",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "g6cVFw4MPnk",
+    youtubeId: "g6cVFw4MPnk",
+    title: "Number guessing game in Python",
+    description: "Description for Video 10",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "9rYdlHUrGwc",
+    youtubeId: "9rYdlHUrGwc",
+    title: "MS DOS Commands in telugu || CLI vs GUI",
+    description: "Description for Video 11",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "n16U6boVc84",
+    youtubeId: "n16U6boVc84",
+    title: "IQOO Z9s Unboxing in telugu",
+    description: "IQOO Z9s Unboxing in telugu",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "W-ZTsHbWbVU",
+    youtubeId: "W-ZTsHbWbVU",
+    title: "How to convert PDF to Word in telugu",
+    description: "How to convert PDF to Word in telugu",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "--nrRiDpG-Q",
+    youtubeId: "--nrRiDpG-Q",
+    title: "A Tool to make ppt in 1 click",
+    description: "A Tool to make ppt in 1 click",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "ksTUc0eIIKQ",
+    youtubeId: "ksTUc0eIIKQ",
+    title: "MS Power Point Tutorial in Telugu - 2",
+    description: "MS Power Point Tutorial in Telugu - 2",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  },
+  {
+    id: "1e5VQeVMm0E",
+    youtubeId: "1e5VQeVMm0E",
+    title: "MS Power Point Tutorial in Telugu - 1",
+    description: "MS Power Point Tutorial in Telugu - 1",
+    playlist: "",
+    resources: { notes: "", code: "", links: "" }
+  }
+];
+  // --- Add more videos here ---
+
+
+// ---- Featured Videos Section ----
+function renderFeaturedVideos() {
+  const container = document.getElementById('featuredVideosGrid');
+  container.innerHTML = videosData.map(v => `
+    <div class="video-card rounded-xl overflow-hidden transform transition-all duration-300">
+      <div class="relative aspect-w-16 aspect-h-9" style="position:relative;width:100%;padding-top:56.25%;">
+        <iframe src="https://www.youtube.com/embed/${v.youtubeId}"
+          title="${v.title}" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">${v.title}</h3>
+        <p class="text-gray-400 mb-4">${v.description}</p>
+        <div class="flex justify-end">
+          <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium"
+                  onclick="showResource('${v.id}');document.getElementById('resources').scrollIntoView({behavior: 'smooth'});">
+            View Resources
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ---- Resources Sidebar ----
+function renderResourceSidebar(filter = "") {
+  const sidebar = document.getElementById('videoListSidebar');
+  let videos = videosData;
+  if (filter.trim()) {
+    // Show ONLY those matching the search
+    const f = filter.trim().toLowerCase();
+    videos = videos.filter(v =>
+      v.title.toLowerCase().includes(f) ||
+      v.playlist.toLowerCase().includes(f) ||
+      v.id.toLowerCase().includes(f)
+    );
+  } else {
+    // Show the first 3 videos by default (or all if less than 3)
+    videos = videos.slice(0, 15);
+  }
+  if (videos.length === 0) {
+    sidebar.innerHTML = `<div class="p-4 text-gray-400">No videos found.</div>`;
+    return;
+  }
+  sidebar.innerHTML = videos.map((v, idx) => `
+    <div class="p-4 border-b border-gray-700 hover:bg-gray-700 cursor-pointer transition ${idx === 0 && !filter ? 'bg-gray-700' : ''}" onclick="showResource('${v.id}')">
+      <div class="flex items-center">
+        <div class="w-16 h-9 rounded object-cover mr-3 aspect-w-16 aspect-h-9" style="background:#222;display:flex;align-items:center;justify-content:center;">
+          <i class="fab fa-youtube text-red-500 text-xl"></i>
+        </div>
+        <div>
+          <h4 class="font-medium text-sm">${v.title}</h4>
+          <p class="text-gray-500 text-xs">${v.playlist}</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ---- Resource Main Content ----
+function showResource(id) {
+  const v = videosData.find(r => r.id === id);
+  if (!v) return;
+  const resourceContent = document.getElementById('resourceContent');
+  let html = `
+    <h3 class="text-2xl font-bold mb-4">${v.title}</h3>
+    <div class="relative aspect-w-16 aspect-h-9 mb-6" style="position:relative;width:100%;padding-top:56.25%;">
+      <iframe src="https://www.youtube.com/embed/${v.youtubeId}"
+        title="${v.title}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+    <nav class="flex space-x-8 mb-6">
+      <button onclick="renderNotes('${v.id}')" class="tab-button py-2 px-1 border-b-2 border-yellow-500 font-medium text-yellow-500">Notes</button>
+      <button onclick="renderCode('${v.id}')" class="tab-button py-2 px-1 border-b-2 border-transparent font-medium text-gray-400 hover:text-white transition">Source Code</button>
+      <button onclick="renderLinks('${v.id}')" class="tab-button py-2 px-1 border-b-2 border-transparent font-medium text-gray-400 hover:text-white transition">Useful Links</button>
+    </nav>
+    <div id="resourceTabContent"></div>
+  `;
+  resourceContent.innerHTML = html;
+  renderNotes(v.id);
+}
+
+function renderNotes(id) {
+  const v = videosData.find(r => r.id === id);
+  document.getElementById('resourceTabContent').innerHTML = v.resources.notes;
+}
+
+function renderCode(id) {
+  const v = videosData.find(r => r.id === id);
+  document.getElementById('resourceTabContent').innerHTML = v.resources.code;
+}
+
+function renderLinks(id) {
+  const v = videosData.find(r => r.id === id);
+  document.getElementById('resourceTabContent').innerHTML = v.resources.links;
+}
+
+// Utility for copying code
+function copyCode(id) {
+  var code = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(code);
+}
+
+// ---- On Load ----
+document.addEventListener("DOMContentLoaded", function() {
+  renderFeaturedVideos();
+  renderResourceSidebar();
+  showResource(videosData[0].id);
+});
+if (document.getElementById('videoSearch')) {
+  document.getElementById('videoSearch').addEventListener('input', function(e) {
+    renderResourceSidebar(e.target.value);
+  });
+}
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
