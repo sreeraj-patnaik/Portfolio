@@ -963,6 +963,51 @@ if (document.getElementById('videoSearch')) {
   });
 }
 
+let showAllVideos = false; // default: show first 6
+
+function renderFeaturedVideos() {
+  const container = document.getElementById('featuredVideosGrid');
+  let videos = showAllVideos ? videosData : videosData.slice(0, 6);
+  container.innerHTML = videos.map(v => `
+    <div class="video-card rounded-xl overflow-hidden transform transition-all duration-300">
+      <div class="relative aspect-w-16 aspect-h-9" style="position:relative;width:100%;padding-top:56.25%;">
+        <iframe src="https://www.youtube.com/embed/${v.youtubeId}"
+          title="${v.title}" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">${v.title}</h3>
+        <p class="text-gray-400 mb-4">${v.description}</p>
+        <div class="flex justify-end">
+          <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium"
+                  onclick="showResource('${v.id}');document.getElementById('resources').scrollIntoView({behavior: 'smooth'});">
+            View Resources
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Show More/Less button
+  const btnLabel = showAllVideos ? "View Less" : "View More";
+  const btn = (videosData.length > 6)
+    ? `<div class="flex justify-center mt-8">
+        <button id="toggleVideosBtn" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-semibold"
+          onclick="toggleFeaturedVideos()">${btnLabel}</button>
+      </div>`
+    : "";
+  container.innerHTML += btn;
+}
+
+function toggleFeaturedVideos() {
+  showAllVideos = !showAllVideos;
+  renderFeaturedVideos();
+}
+
+document.addEventListener("DOMContentLoaded", renderFeaturedVideos);
+
     </script>
 </body>
 </html>
