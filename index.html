@@ -1,469 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="google-site-verification" content="hiogXl8bX2Xjbgb1b8JiC9C1OK2QiCzd3gIG3wRUyu4" />
-    <meta name="google-site-verification" content="1vZv4AOEO4q7-22OD7JjMfGFNGTx3bf-e8P-dVadRdU" />
     <meta charset="UTF-8">
-    <meta name="description" content="Editor-In-Chief @ LWC, Developer,  Student, and Writer. View my projects, skills, and resume.">
-  <meta name="keywords" content="Sreeraj Dabbiru, portfolio, developer, student, LWC, LIET, full stack, projects, poetry, editor">
-  <meta name="author" content="Sreeraj Dabbiru">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Sreeraj  Dabbiru | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
-<link rel="stylesheet" href="styles.css">
+    <title>Sreeraj Dabbiru | Modern Portfolio</title>
+    <meta name="description" content="Editor-In-Chief @ LWC, Developer, Student, and Writer. View my projects, skills, and resume.">
+    <meta name="keywords" content="Sreeraj Dabbiru, portfolio, developer, student, LWC, LIET, full stack, projects, poetry, editor">
+    <meta name="author" content="Sreeraj Dabbiru">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="floating-pills-container">
-  <a href="blog.html" class="floating-pill" style="font-size: larger; font-weight: 600;">My Blogs</a>
-</div>
-  <!-- Sidebar -->
-  <aside id="sidebar" aria-label="Sidebar Navigation">
-    <img
-      src="images/profyl.jpeg"
-      alt="Portrait photo of Sreeraj Dabbiru"
-      class="profile-pic"
-      loading="lazy"
-    />
-    <h2>Sreeraj Dabbiru</h2>
-    <p class="bio">
-        "Editor-In-Chief @ LWC | BTech UnderGrad LIET’28 | CSSE Dept | C, Python, HTML, CSS | Aspiring Full-Stack Developer | Class Representative | Communicator | Winner, Dist Poetry Competition – Yuva Utsav 2024 | Writer"
-    </p>
-    <nav role="navigation" aria-label="Main Navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="CodeTech.html" style="background-color: yellow; color: red;">Youtube - CodeTech</a>
-
-
-    </nav>
-<h3 style="color: yellow; padding-left: 56px;">Highlights</h3>
-    <div class="card" style="width: 14rem;">
-      <img src="images/img7.jpeg" class="card-img-top" alt="Sreeraj Dabbiru with Dr. G. Satheesh Reddy">
-      <div class="card-body">
-        <h5 class="card-title">With Dr. G. Satheesh Reddy</h5>
-        <p class="card-text">
-          Honored to share the stage and a few inspiring moments with the renowned scientist and India’s modern missile man, Dr. G. Satheesh Reddy.
-        </p>
-      </div>
-    </div>
-    
-  </aside>
-
-  <!-- Sidebar Toggle Button -->
-  <button id="sidebarToggle" aria-label="Toggle Sidebar">
-    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
-  </button>
-
-  <!-- Main Content -->
-
-
-  <main id="mainContent">
-    <br>
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Sreeraj Dabbiru</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#skills" tabindex="-1" aria-disabled="true">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects" tabindex="-1" aria-disabled="true">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#gallery" tabindex="-1" aria-disabled="true">gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact</a>
-              </li>
-
-              <li class="nav-item">
-              </li>
-                    <a class = "nav-link" href="CodeTech.html" style="background-color: red; color: red;">Youtube - CodeTech</a>
-
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Sreeraj Dabbiru</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="blog.html" class="nav-link btn-secondary">My Blog</a></li>
+                <!-- <li><a href="codetech.html" class="nav-link btn-primary">CodeTech YouTube</a></li> -->
             </ul>
-            
-          </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <span class="logo">Sreeraj Dabbiru</span>
+            <i class="fas fa-times close-mobile-menu"></i>
         </div>
-      </nav>
-
-<br>
-    
-      
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/District-winner-eenadu-newspaper-cutout.jpeg" class="d-block w-100" alt="Cutout of EENADU newspaper of 2 January 2025, Featuring Sreeraj Dabbiru, Poetry winner in Yuva Utsav ">
-           
-          </div>
-          <div class="carousel-item">
-            <img src="images/lendi-write-club-newsletter-presentation.jpeg" class="d-block w-100" alt="Launching of our first Newsletter by Dr VV Ramareddy Sir, Principal of LIET. Mentor Prof Revathi G, President Jyothsna A, Sreeraj Dabbiru - Editor-in-Chief and other members Participated ">
-           
-          </div>
-          
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-  
-   <!-- About Me Section -->
-  <section class="container my-5">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <center>
-            <img src="images/profyl.jpeg" alt="My photo" class="profile-img" style="border-radius: 50px ; width: 150px; height: auto;">
-        </center>
-        </div>
-      <div class="col-md-8">
-        <h2>About Me</h2>
-        <h2>B.Tech | Computer Science &amp; Systems Engineering | LIET ’28</h2>
-
-    <p>
-        I’m a Computer Science student at LIET with a <span class="highlight">9.7 GPA</span>, passionate about <span class="highlight">Machine Learning</span> and using technology to solve real-world problems. While I have solid foundations in <span class="highlight">Web Development, C, Python, HTML, and CSS</span>
-    </p>
-
-    <p>
-        As <b>Editor-in-Chief of LWC</b>, I work to communicate ideas clearly and meaningfully. I was humbly a proud member of the team that revived the <b>Student Activity Centre (SAC)</b>, proving that steady, quiet effort can bring spaces back to life.
-    </p>
-
-    <p>
-        Writing keeps me grounded — winning the <b>District Poetry Competition (Yuva Utsav 2024)</b> reminds me that creativity and logic go hand in hand.
-    </p>
-
-    <p>
-        Mentoring friends and peers is important. As a great voice said, "If you couldnt explain it, You didnt understand it". <br> I believe leadership is about <b>listening, guiding, and helping others find their own path</b>.
-    </p>
-
-    <p>
-        I’m not aiming to have all the answers — just a willingness to grow and help others grow too.
-    </p> </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+            <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="blog.html" class="mobile-nav-link btn-secondary">My Blog</a></li>
+            <!-- <li><a href="codetech.html" class="mobile-nav-link btn-primary">CodeTech YouTube</a></li> -->
+        </ul>
     </div>
-  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">Python</span>
-        <span class="skill">C</span>
-        <span class="skill">Bootstrap</span>
-        <span class="skill">Numpy</span>
-        <span class="skill">Pandas</span>
-        <span class="skill">DS & Problem solving</span>
-
-
-
-      </div>
-    </section>
-
-
-    <div class="container py-5">
-      <h2 class="text-center mb-4">My Certifications</h2>
-  
-      <div class="scrolling-wrapper px-2 tec">
-        <!-- Certification Card 1 -->
-        <div class="card cert-card-tech">
-          <div class="card-body text-center">
-            <i class="cert-icon bi bi-award-fill"></i>
-            <h6>Technical</h6>
-            <h5 class="card-title mt-3">Introduction to Data Science by INFOSYS </h5>
-            <p class="card-text">
-              Completed cource of Introduction to Data Science by <br><b>INFOSYS SPRINGBOARD.</b>
-            </p>
-            <a
-              href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_introduction-to-data-science-activity-7334585354504609792-SjIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
-              target="_blank"
-              class="btn btn-cert-tech btn-sm"
-              >🔗 LinkedIn</a
-            >
-          </div>
-        </div>
-        <div class="card cert-card-tech">
-          <div class="card-body text-center">
-            <i class="cert-icon bi bi-award-fill"></i>
-            <h6>Technical</h6>
-            <h5 class="card-title mt-3">Java Full stack with React JS and AI </h5>
-            <p class="card-text">
-              NSTTP-2K24 on Java Full Stack with React JS & AI, organized by LIET <br> in collaboration with Brainovision Solutions India Pvt. Ltd. and AICTE.</b>
-            </p>
-            <a
-              href="National Level Short-Term Training Program (NSTTP-2K24) on Java Full Stack with React JS & AI, organized by Lendi Institute of Engineering & Technology in collaboration with Brainovision Solutions India Pvt. Ltd. and AICTE."
-              target="_blank"
-              class="btn btn-cert-tech btn-sm"
-              >🔗 LinkedIn</a
-            >
-          </div>
-        </div>
-  
-       
-  
-        <!-- Certification Card 3 -->
-        <div class="card cert-card-tech">
-          <div class="card-body text-center">
-            <i class="cert-icon bi bi-award-fill"></i>
-            <h5 class="card-title mt-3">Web Full Stack Developer Virtual internship</h5>
-            <p class="card-text">
-             Certification of completion of Web full stack developer <br> virtual internship supported by EduSkills and AICTE
-            </p>
-            <a
-              href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
-              target="_blank"
-              class="btn btn-cert-tech btn-sm"
-              >🔗 LinkedIn</a
-            >
-          </div>
-        </div>
-
-        <div class="card cert-card-tech">
-          <div class="card-body text-center">
-            <i class="cert-icon bi bi-award-fill"></i>
-            <h5 class="card-title mt-3">Cyber Security Virtual Internship</h5>
-            <p class="card-text">
-             Certification of completion of Cyber Security Virtual <br>internship supported by Paloalto Networks, EduSkills and AICTE
-            </p>
-            <a
-              href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
-              target="_blank"
-              class="btn btn-cert-tech btn-sm"
-              >🔗 LinkedIn</a
-            >
-          </div>
-        </div>
-   <!-- Certification Card 2 -->
-   <div class="card cert-card-nontech">
-    <div class="card-body text-center">
-      <i class="cert-icon bi bi-award-fill"></i>
-      <h6>Non-Technical</h6>
-
-      <h5 class="card-title mt-3">District Level Poetry</h5>
-      <p class="card-text">
-       Certificate of standing first in District level Poetry <br>competetion
-      </p>
-      <a
-        href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_yeah-an-old-one-forgot-to-share-it-then-activity-7319205243903176704-jzKG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
-        target="_blank"
-        class="btn btn-cert-nontech btn-sm"
-        >🔗 LinkedIn</a
-      >
-    </div>
-  </div>
-        <!-- Add more certification cards here -->
-      </div>
-    </div>
- <!-- Timeline Section -->
- <section class="container my-5">
-    <h2 class="mb-4">My Journey</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <p>May 2025 - Assumed Reins as The Editor-in-Chief of the LWC</p>
-      </div>
-      <div class="timeline-item">
-        <p>Jan 2025 - Completed First Semester of my BTech with 9.7 CGPA</p>
-      </div>
-      <div class="timeline-item">
-        <p>Dec 2024 -
-            Selected as an Interim President for the Lendi Write Club</p>
-      </div>
-      <div class="timeline-item">
-        <p>Oct 2024 - 
-            Awarded First in District-level Poetry Competition by SETWEZ</p>
-      </div>
-      <div class="timeline-item">
-        <p>May 2024 - 
-            Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
-      </div>
-      <div class="timeline-item">
-        <p>May 2022 - 
-            Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
-     
-    </div>
-  </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="row">
-        <div class="card">
-          <img src="images/c2.PNG" alt="Project screenshot">
-          <div class="card-body">
-            <h3 class="card-title">Hogwarts Website</h3>
-            <p class="card-text">A Website for fictional Hogwarts School of Witchcraft and Wizardry</p>
-            <a href="#" class="btn-link">View Project</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="images/h2.PNG" alt="Project screenshot">
-          <div class="card-body">
-            <h3 class="card-title">A Mock Classroom Website</h3>
-            <p class="card-text">A mock Website for CSSE Classroom Updates</p>
-            <a href="#" class="btn-link">View Project</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="container py-5">
-        <h1 class="text-center mb-4" data-aos="fade-up">Photo Gallery</h1>
-        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">A collection of memorable moments, creative works, and event highlights.</p>
-      
-        <div class="row g-4">
-      
-      
-           <!-- Photo 5 -->
-           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="card">
-                <img src="images/img7.jpeg" alt="Sreeraj Dabbiru's Photo with Dr G Sateesh Reddy, former DRDO chairperson" class="gallery-img">
-                <div class="card-body">
-                  <h5 class="card-title">With Dr G Sateesh sir</h5>
-                  <p class="card-text">With one of the greatest scientists and former chairperson of DRDO, Advisor to Defense Minister Dr G Sateesh Reddy sir</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section section-padding">
+        <div class="container hero-content">
+            <div class="hero-text animate-on-scroll">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Sreeraj Dabbiru</span></h1>
+                <p class="hero-bio">
+                    Editor-In-Chief @ LWC | BTech UnderGrad LIET’28 | CSSE Dept | C, Python, HTML, CSS | Aspiring Full-Stack Developer | Class Representative | Communicator | Winner, Dist Poetry Competition – Yuva Utsav 2024 | Writer
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right ml-2"></i></a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch <i class="fas fa-envelope ml-2"></i></a>
                 </div>
-              </div>
             </div>
-      
-             <!-- Photo 5 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="card">
-                <img src="images/img9.jpeg" alt="Sreeraj Dabbiru Rendering his voice for The Lendi Radio Club" class="gallery-img">
-                <div class="card-body">
-                  <h5 class="card-title">Hosting Radio Show for LWC</h5>
-                  <p class="card-text">Rendering my voice for The Lendi Radio Club</p>
-                </div>
-              </div>
+            <div class="hero-image animate-on-scroll">
+                <img src="images/profyl.jpeg" alt="Sreeraj Dabbiru Portrait">
             </div>
-      
-                 <!-- Photo 5 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="card">
-                <img src="images/img10.jpeg" alt="Sreeraj Dabbiru Playing with Chemicals under careful supervision of faculty" class="gallery-img">
-                <div class="card-body">
-                  <h5 class="card-title">In the Engineering Chemistry Lab</h5>
-                  <p class="card-text">Playing with Chemicals under careful supervision of faculty.</p>
-                </div>
-              </div>
-            </div>
-      
-          <!-- Photo 1 -->
-          <div class="col-md-4" data-aos="fade-up">
-            <div class="card">
-              <img src="images/img1.jpg" alt="Sreeraj Dabbiru after winning District First in YUVA UTSAV 2024" class="gallery-img">
-              <div class="card-body">
-                <h5 class="card-title">Yuva Utsav 2024</h5>
-                <p class="card-text">Capturing the moment after winning the District Poetry Competition.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Photo 2 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <img src="images/img2.jpg" alt="Sreeraj Dabbiru in the Central Library of Lendi Institute of Engineering and Technology (LIET)" class="gallery-img">
-              <div class="card-body">
-                <h5 class="card-title">First time In the Central Library</h5>
-                <p class="card-text">Capturing every moment in the very beginning days of my BTech</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Photo 3 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-              <img src="images/img4.jpeg" alt="Sreeraj Dabbiru Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy" class="gallery-img">
-              <div class="card-body">
-                <h5 class="card-title">Newsletter Launch</h5>
-                <p class="card-text">Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy.</p>
-              </div>
-            </div>
-          </div>
-      
-         
-      
-          <!-- Photo 5 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <img src="images/img6.jpeg" alt="Sreeraj Dabbiru in Simhachalam Stepsway" class="gallery-img">
-              <div class="card-body">
-                <h5 class="card-title">Simhachalam</h5>
-                <p class="card-text">Lost in the Nature's Beauty at Simhachalam</p>
-              </div>
-            </div>
-          </div>
-      
-         
-      
-          <!-- Add more photos as needed -->
         </div>
-      </div>
-      
-      <button id="viewMoreBtn">View More</button>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can  connect with me on <a href="https://www.linkedin.com/in/sreeraj-dabbiru-65bb28262/">LinkedIn</a>.</p>
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        I’m a Computer Science Second Year student at LIET with a <span class="highlight">9.7 GPA</span>, passionate about <span class="highlight">Machine Learning</span> and using technology to solve real-world problems. While I have solid foundations in <span class="highlight">Web Development, C, Python, HTML, and CSS</span>.
+                    </p>
+                    <p>
+                        As <b>Editor-in-Chief of LWC</b>, I work to communicate ideas clearly and meaningfully. I was humbly a proud member of the team that revived the <b>Student Activity Centre (SAC)</b>, proving that steady, quiet effort can bring spaces back to life.
+                    </p>
+                    <p>
+                        Writing keeps me grounded — winning the <b>District Poetry Competition (Yuva Utsav 2024)</b> reminds me that creativity and logic go hand in hand.
+                    </p>
+                    <p>
+                        Mentoring friends and peers is important. As a great voice said, "If you couldn't explain it, You didn't understand it". I believe leadership is about <b>listening, guiding, and helping others find their own path</b>. I’m not aiming to have all the answers — just a willingness to grow and help others grow too.
+                    </p>
+                </div>
+                <div class="about-cards animate-on-scroll">
+                    <div class="about-card">
+                        <i class="fas fa-graduation-cap icon-large"></i>
+                        <h3>Education</h3>
+                        <p>B.Tech in CSSE, LIET’28</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-award icon-large"></i>
+                        <h3>Achievements</h3>
+                        <p>District Poetry Winner</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-pencil-alt icon-large"></i>
+                        <h3>Role</h3>
+                        <p>Editor-In-Chief @ LWC</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-code icon-large"></i>
+                        <h3>Aspiration</h3>
+                        <p>Full-Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Sreeraj Dabbiru. All rights reserved.
-  </footer>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item animate-on-scroll">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fab fa-python skill-icon"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fas fa-c skill-icon"></i>
+                    <p>C Language</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fab fa-bootstrap skill-icon"></i>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fas fa-calculator skill-icon"></i>
+                    <p>Numpy</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fas fa-table skill-icon"></i>
+                    <p>Pandas</p>
+                </div>
+                <div class="skill-item animate-on-scroll">
+                    <i class="fas fa-puzzle-piece skill-icon"></i>
+                    <p>DS & Problem Solving</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- JavaScript for Sidebar Toggle and Fade-In -->
-  <script>
-    const toggleBtn = document.getElementById('sidebarToggle');
-    const sidebar = document.getElementById('sidebar');
-    const main = document.getElementById('mainContent');
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card animate-on-scroll">
+                    <i class="fas fa-award cert-icon"></i>
+                    <h3>Introduction to Data Science</h3>
+                    <p>Completed course by INFOSYS SPRINGBOARD.</p>
+                    <a href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_introduction-to-data-science-activity-7334585354504609792-SjIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY" target="_blank" class="btn btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <i class="fas fa-award cert-icon"></i>
+                    <h3>Java Full Stack with React JS & AI</h3>
+                    <p>NSTTP-2K24 by LIET in collaboration with Brainovision Solutions India Pvt. Ltd. and AICTE.</p>
+                    <a href="#" target="_blank" class="btn btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <i class="fas fa-award cert-icon"></i>
+                    <h3>Web Full Stack Developer Virtual Internship</h3>
+                    <p>Completed virtual internship supported by EduSkills and AICTE.</p>
+                    <a href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY" target="_blank" class="btn btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <i class="fas fa-award cert-icon"></i>
+                    <h3>Cyber Security Virtual Internship</h3>
+                    <p>Completed virtual internship supported by Paloalto Networks, EduSkills and AICTE.</p>
+                    <a href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY" target="_blank" class="btn btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <i class="fas fa-award cert-icon"></i>
+                    <h3>District Level Poetry Competition</h3>
+                    <p>Certificate for standing first in District level Poetry competition.</p>
+                    <a href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_yeah-an-old-one-forgot-to-share-it-then-activity-7319205243903176704-jzKG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY" target="_blank" class="btn btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
-      main.classList.toggle('expanded');
-    });
+    <!-- Journey/Timeline Section -->
+    <section id="journey" class="journey-section section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2025</h3>
+                        <p>Assumed Reins as The Editor-in-Chief of the LWC</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Jan 2025</h3>
+                        <p>Completed First Semester of my BTech with 9.7 CGPA</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Dec 2024</h3>
+                        <p>Selected as an Interim President for the Lendi Write Club</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Oct 2024</h3>
+                        <p>Awarded First in District-level Poetry Competition by SETWEZ</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2024</h3>
+                        <p>Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2022</h3>
+                        <p>Completed SSC with Distinction in Sri Chaitanya Techno School – Palasa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Fade-in animation
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <img src="images/c2.PNG" alt="Hogwarts Website">
+                    <div class="card-content">
+                        <h3>Hogwarts Website</h3>
+                        <p>A website for the fictional Hogwarts School of Witchcraft and Wizardry.</p>
+                        <a href="#" class="btn btn-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <img src="images/h2.PNG" alt="Mock Classroom Website">
+                    <div class="card-content">
+                        <h3>A Mock Classroom Website</h3>
+                        <p>A mock website for CSSE Classroom Updates.</p>
+                        <a href="#" class="btn btn-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <img src="images/codetech-thumbnail.jpg" alt="CodeTech YouTube Channel">
+                    <div class="card-content">
+                        <h3>CodeTech YouTube Channel</h3>
+                        <p>My YouTube channel dedicated to teaching programming concepts.</p>
+                        <a href="codetech.html" class="btn btn-link">Visit Channel <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    fadeInElements.forEach(el => observer.observe(el));
-    
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <!-- Gallery Section -->
+<section id="gallery" class="gallery-section section-padding">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Photo Gallery</h2>
+        <p class="section-description animate-on-scroll">A collection of memorable moments, creative works, and event highlights from my journey.</p>
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img7.jpeg" alt="Sreeraj Dabbiru with Dr G Sateesh Reddy">
+                    <div class="gallery-caption">
+                        <h3>With Dr G Sateesh sir</h3>
+                        <p>With one of the greatest scientists and former chairperson of DRDO, Advisor to Defense Minister Dr G Sateesh Reddy sir.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img9.jpeg" alt="Sreeraj Dabbiru Hosting Radio Show for LWC">
+                    <div class="gallery-caption">
+                        <h3>Hosting Radio Show for LWC</h3>
+                        <p>Rendering my voice for The Lendi Radio Club.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img10.jpeg" alt="Sreeraj Dabbiru in the Engineering Chemistry Lab">
+                    <div class="gallery-caption">
+                        <h3>In the Engineering Chemistry Lab</h3>
+                        <p>Playing with Chemicals under careful supervision of faculty.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img1.jpg" alt="Sreeraj Dabbiru after winning District First in YUVA UTSAV 2024">
+                    <div class="gallery-caption">
+                        <h3>Yuva Utsav 2024</h3>
+                        <p>Capturing the moment after winning the District Poetry Competition.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img2.jpg" alt="Sreeraj Dabbiru in the Central Library of LIET">
+                    <div class="gallery-caption">
+                        <h3>First time In the Central Library</h3>
+                        <p>Capturing every moment in the very beginning days of my BTech.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img4.jpeg" alt="Sreeraj Dabbiru Presenting the First Newsletter of LWC">
+                    <div class="gallery-caption">
+                        <h3>Newsletter Launch</h3>
+                        <p>Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/img6.jpeg" alt="Sreeraj Dabbiru in Simhachalam Stepsway">
+                    <div class="gallery-caption">
+                        <h3>Simhachalam</h3>
+                        <p>Lost in the Nature's Beauty at Simhachalam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content">
+               
+                </div>
+                <div class="contact-info animate-on-scroll">
+                    <h3>Connect with me!</h3>
+                    <p>I'm always open to new opportunities, collaborations, and interesting conversations. Feel free to reach out!</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope icon-small"></i>
+                        <span>sreerajdabbiru@gmail.com</span> <!-- Replace with actual email -->
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone icon-small"></i>
+                        <span>+91 9059659477</span> <!-- Replace with actual phone -->
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt icon-small"></i>
+                        <span>Visakhapatnam, India</span> <!-- Replace with actual location -->
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sreeraj-dabbiru-65bb28262/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sreerajdabbiru" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@sreeraj_dabbiru" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <!-- Add more social media links as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sreeraj Dabbiru. All rights reserved.</p>
+            <p class="footer-note">Designed and Developed with Passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

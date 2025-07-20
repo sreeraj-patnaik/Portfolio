@@ -1,126 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="google-site-verification" content="hiogXl8bX2Xjbgb1b8JiC9C1OK2QiCzd3gIG3wRUyu4" />
-    <meta name="google-site-verification" content="1vZv4AOEO4q7-22OD7JjMfGFNGTx3bf-e8P-dVadRdU" />
     <meta charset="UTF-8">
-    <meta name="description" content="Editor-In-Chief @ LWC, Developer,  Student, and Writer. View my projects, skills, and resume.">
-  <meta name="keywords" content="Sreeraj Dabbiru, portfolio, developer, student, LWC, LIET, full stack, projects, poetry, editor">
-  <meta name="author" content="Sreeraj Dabbiru">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Sreeraj  Dabbiru | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
-<link rel="stylesheet" href="styles.css">
+    <title>Sreeraj Dabbiru | My Blog</title>
+    <meta name="description" content="Read blog posts by Sreeraj Dabbiru on technology, writing, and personal experiences.">
+    <meta name="keywords" content="Sreeraj Dabbiru, blog, articles, technology, writing, LWC, Minecraft">
+    <meta name="author" content="Sreeraj Dabbiru">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Sreeraj Dabbiru</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="blog.html" class="nav-link btn-secondary active">My Blog</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
- <!-- Sidebar -->
- <aside id="sidebar" aria-label="Sidebar Navigation">
-    <img
-      src="images/profyl.jpeg"
-      alt="Portrait photo of Sreeraj Dabbiru"
-      class="profile-pic"
-      loading="lazy"
-    />
-    <h2>Sreeraj Dabbiru</h2>
-    <p class="bio">
-        "Editor-In-Chief @ LWC | BTech UnderGrad LIET’28 | CSSE Dept | C, Python, HTML, CSS | Aspiring Full-Stack Developer | Class Representative | Communicator | Winner, Dist Poetry Competition – Yuva Utsav 2024 | Writer"
-    </p>
-    <nav role="navigation" aria-label="Main Navigation">
-      <a href="index.html">Home</a>
-      
-    </nav>
-  </aside>
-
-  <!-- Sidebar Toggle Button -->
-  <button id="sidebarToggle" aria-label="Toggle Sidebar">
-    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
-  </button>
-  
-
-  <!-- Main Content -->
-  <main id = "mainContent">
-    <section id="blog">
-      <h2>My Blog</h2>
-
-      <!-- Blog Post Card -->
-      <div class="card mb-4">
-        <div class="card-body">
-          <h3 class="card-title">From Wheels to Wings, The story of Clubs revival at Lendi</h3>
-          <p class="card-text">
-            Looking back, I don’t remember every detail. But I remember every emotion. 
-That bus ride didn’t just take us home, it led us to our purpose. 
-This is not a story about me. 
-Not even just about Prudhvi, Dhanush, or our amazing teams. 
-This is a story of what happens when students are trusted. 
-When ideas are not laughed at, but lifted. 
-When education includes expression, not just examination. 
-And that’s what we created. 
-Not four clubs. 
-But a culture. 
-One that will live long after we’ve passed the torch.
-          </p>
-          <a href="From-Wheels-to-Wings-The-story-of-Clubs-revival-at-Lendi.html" class="btn-link">Read more</a>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <span class="logo">Sreeraj Dabbiru</span>
+            <i class="fas fa-times close-mobile-menu"></i>
         </div>
-      </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+            <li><a href="index.html#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="index.html#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="blog.html" class="mobile-nav-link btn-secondary active">My Blog</a></li>
+        </ul>
+    </div>
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section section-padding">
+        <div class="container">
+            <h1 class="section-title animate-on-scroll">My Blog</h1>
 
-       <!-- Blog Post Card -->
-       <div class="card mb-4">
-        <div class="card-body">
-          <h3 class="card-title">Build a Working Computer in Minecraft to Play Minecraft in Minecraft</h3>
-          <p class="card-text">
-            Redstone is Minecraft’s version of electricity. It powers doors, minecarts, lamps — and much more. With Redstone, players have built logic gates, memory units, clocks, and arithmetic circuits. With enough patience and creativity, some have constructed full-blown 8-bit and 16-bit CPUs, complete with RAM, ALUs (Arithmetic Logic Units), and even visual displays — all using Redstone.
-          </p>
-          <a href="Build-a-Working-Computer-in-Minecraft-to-Play-Minecraft-in-Minecraft.html" class="btn-link">Read more</a>
+            <div class="blog-posts-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-post-card animate-on-scroll">
+                    <div class="card-content">
+                        <h2>From Wheels to Wings, The story of Clubs revival at Lendi</h2>
+                        <p>
+                            Looking back, I don’t remember every detail. But I remember every emotion. That bus ride didn’t just take us home, it led us to our purpose. This is not a story about me. Not even just about Prudhvi, Dhanush, or our amazing teams. This is a story of what happens when students are trusted. When ideas are not laughed at, but lifted. When education includes expression, not just examination. And that’s what we created. Not four clubs. But a culture. One that will live long after we’ve passed the torch.
+                        </p>
+                        <a href="From-Wheels-to-Wings-The-story-of-Clubs-revival-at-Lendi.html" class="btn btn-link">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-post-card animate-on-scroll">
+                    <div class="card-content">
+                        <h2>Build a Working Computer in Minecraft to Play Minecraft in Minecraft</h2>
+                        <p>
+                            Redstone is Minecraft’s version of electricity. It powers doors, minecarts, lamps — and much more. With Redstone, players have built logic gates, memory units, clocks, and arithmetic circuits. With enough patience and creativity, some have constructed full-blown 8-bit and 16-bit CPUs, complete with RAM, ALUs (Arithmetic Logic Units), and even visual displays — all using Redstone.
+                        </p>
+                        <a href="Build-a-Working-Computer-in-Minecraft-to-Play-Minecraft-in-Minecraft.html" class="btn btn-link">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Add more blog posts here as needed -->
+            </div>
         </div>
-      </div>
-
-     
-
-      <!-- Add more blog posts like this -->
     </section>
-  </main>
 
-  <!-- Floating Pill -->
-  <a href="index.html" class="floating-pill" style="font-size: larger; font-weight: 600;">Home</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sreeraj Dabbiru. All rights reserved.</p>
+            <!-- <p class="footer-note">Designed and Developed by BLACKBOX.AI Assistant</p> -->
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Sreeraj Dabbiru. All rights reserved.
-  </footer>
-<!-- JavaScript for Sidebar Toggle and Fade-In -->
-<script>
-    const toggleBtn = document.getElementById('sidebarToggle');
-    const sidebar = document.getElementById('sidebar');
-    const main = document.getElementById('mainContent');
-
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
-      main.classList.toggle('expanded');
-    });
-
-    // Fade-in animation
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    fadeInElements.forEach(el => observer.observe(el));
-    
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
