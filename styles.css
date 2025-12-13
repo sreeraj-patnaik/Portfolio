@@ -1,343 +1,432 @@
 /* =========================================================
-   ROOT VARIABLES — CALM, ACADEMIC PALETTE
-========================================================= */
+   CORE PHILOSOPHY
+   Quiet confidence. Academic weight. Intentional motion.
+   ========================================================= */
+
+/* ===== Variables ===== */
 :root {
-    --primary: #1f2937;        /* Slate 800 */
-    --secondary: #374151;      /* Slate 700 */
-    --accent: #4f46e5;         /* Indigo */
-    --muted: #6b7280;          /* Gray 500 */
-    --bg-main: #ffffff;
-    --bg-soft: #f9fafb;
-    --bg-contrast: #111827;
-    --border: #e5e7eb;
+  --primary: #4F46E5;
+  --secondary: #8B5CF6;
+  --accent: #F59E0B;
 
-    --radius-sm: 6px;
-    --radius-md: 10px;
+  --bg-main: #ffffff;
+  --bg-soft: #f9fafb;
+  --bg-dark: #0f172a;
 
-    --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
-    --shadow-med: 0 10px 25px rgba(0,0,0,0.08);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-faint: #94a3b8;
 
-    --transition-fast: 0.25s ease;
-    --transition-slow: 0.6s ease;
+  --border: #e5e7eb;
+
+  --radius: 14px;
+
+  --shadow-sm: 0 6px 14px rgba(0,0,0,0.06);
+  --shadow-md: 0 20px 40px rgba(0,0,0,0.08);
+
+  --ease-soft: cubic-bezier(.25,.8,.25,1);
+  --ease-sharp: cubic-bezier(.4,0,.2,1);
 }
 
-/* =========================================================
-   RESET & BASE
-========================================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Inter", system-ui, sans-serif;
-    background: var(--bg-main);
-    color: var(--primary);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.75;
+  letter-spacing: 0.2px;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
+/* ===== Typography Rhythm ===== */
 h1, h2, h3, h4 {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-    font-size: 3.2rem;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 800;
 }
 
 h2 {
-    font-size: 2.2rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 1.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 p {
-    color: var(--secondary);
-    font-size: 1.05rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 70ch;
+}
+
+/* ===== Containers ===== */
+.container {
+  max-width: 1180px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section.soft {
+  background: var(--bg-soft);
 }
 
 /* =========================================================
    NAVIGATION
-========================================================= */
-.site-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--bg-main);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
+   ========================================================= */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 14px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.brand-name {
-    font-weight: 700;
-    font-size: 1.1rem;
+.nav a {
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-left: 28px;
+  position: relative;
 }
 
-.brand-sub {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--muted);
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s var(--ease-soft);
 }
 
-.primary-nav a {
-    margin-left: 28px;
-    font-size: 0.95rem;
-    color: var(--secondary);
-    position: relative;
-}
-
-.primary-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: width var(--transition-fast);
-}
-
-.primary-nav a:hover::after {
-    width: 100%;
+.nav a:hover::after {
+  width: 100%;
 }
 
 /* =========================================================
-   HERO SECTION
-========================================================= */
-.hero-block {
-    padding-top: 140px;
-    padding-bottom: 120px;
-    background: var(--bg-soft);
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
 }
 
 .hero-grid {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 60px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
 }
 
-.hero-name span {
-    color: var(--accent);
+.hero-subtitle {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-faint);
+  margin-bottom: 18px;
 }
 
-.hero-tagline {
-    font-size: 1.15rem;
-    color: var(--muted);
-    margin: 16px 0 28px;
+.hero-intro {
+  margin-top: 28px;
 }
 
-.hero-description p {
-    margin-bottom: 18px;
+.hero-intro.muted {
+  color: var(--text-faint);
+  font-size: 0.95rem;
 }
 
-.profile-frame {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 260px;
-    height: 260px;
-    border: 5px solid var(--accent);
-    box-shadow: var(--shadow-med);
-    margin-left: auto;
-}
-
-/* =========================================================
-   SECTIONS — COMMON
-========================================================= */
-section {
-    padding: 110px 20px;
-}
-
-.section-header {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.section-intro {
-    margin-top: 14px;
-    color: var(--muted);
+/* Portrait */
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--primary);
+  box-shadow: var(--shadow-md);
 }
 
 /* =========================================================
-   PROFILE
-========================================================= */
-.profile-layout {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
+   ANIMATION SYSTEM (THE LIFE)
+   ========================================================= */
+
+.reveal-slow {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 1s var(--ease-soft),
+              transform 1s var(--ease-soft);
 }
 
-.info-card {
-    padding: 28px;
-    background: var(--bg-soft);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
+.reveal-fast {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s var(--ease-sharp),
+              transform 0.4s var(--ease-sharp);
+}
+
+.reveal-slow.active,
+.reveal-fast.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =========================================================
-   SKILLS MATRIX
-========================================================= */
-.skills-matrix {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 30px;
+   ABOUT
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
 }
 
-.skill-column {
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
 }
 
-.skill-column ul li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+.about-card {
+  background: white;
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   SKILLS (INTELLECTUAL GROUPING)
+   ========================================================= */
+
+.skill-group {
+  margin-bottom: 50px;
+}
+
+.skill-group h3 {
+  margin-bottom: 14px;
+  color: var(--text-main);
+}
+
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-group li {
+  padding: 6px 0;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.skill-group li::before {
+  content: "—";
+  position: absolute;
+  left: -20px;
+  color: var(--primary);
 }
 
 /* =========================================================
    TIMELINE
-========================================================= */
-.timeline-track {
-    max-width: 900px;
-    margin: auto;
-    border-left: 3px solid var(--border);
-    padding-left: 40px;
+   ========================================================= */
+
+.timeline {
+  position: relative;
+  margin-top: 80px;
 }
 
-.timeline-entry {
-    margin-bottom: 40px;
-    position: relative;
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
 }
 
-.timeline-entry::before {
-    content: "";
-    position: absolute;
-    left: -51px;
-    top: 6px;
-    width: 14px;
-    height: 14px;
-    background: var(--accent);
-    border-radius: 50%;
+.timeline-item {
+  width: 50%;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 36px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -7px;
 }
 
 /* =========================================================
-   PROJECTS
-========================================================= */
-.projects-grid {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    padding-bottom: 20px;
+   PROJECTS (WEIGHTED, NOT FLASHY)
+   ========================================================= */
+
+.projects-row {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  padding-bottom: 20px;
 }
 
 .project-card {
-    min-width: 340px;
-    background: var(--bg-soft);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: transform var(--transition-fast);
+  min-width: 360px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
-.project-card:hover {
-    transform: translateY(-6px);
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .content {
+  padding: 26px;
+}
+
+.project-card .tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+  margin-bottom: 8px;
 }
 
 /* =========================================================
-   GALLERY — ARCHIVAL STYLE
-========================================================= */
-.gallery-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-    gap: 24px;
+   GALLERY (ARCHIVAL FEEL)
+   ========================================================= */
+
+.gallery-note {
+  font-size: 0.95rem;
+  color: var(--text-faint);
+  margin-bottom: 40px;
 }
 
-.gallery-grid img {
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-soft);
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 /* =========================================================
    CONTACT
-========================================================= */
-.contact-panel {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
+   ========================================================= */
+
+.contact-box {
+  background: white;
+  padding: 60px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
 }
 
-.contact-details li {
-    list-style: none;
-    margin-top: 10px;
+.contact-box p {
+  margin-bottom: 12px;
 }
 
 /* =========================================================
    FOOTER
-========================================================= */
-.site-footer {
-    padding: 40px 20px;
-    background: var(--bg-contrast);
-    color: #d1d5db;
-    text-align: center;
-    font-size: 0.85rem;
-}
+   ========================================================= */
 
-/* =========================================================
-   MICRO-ANIMATIONS (ACADEMIC)
-========================================================= */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-section {
-    animation: fadeUp 0.8s ease both;
+footer {
+  background: var(--bg-dark);
+  color: #cbd5f5;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .profile-layout {
-        grid-template-columns: 1fr;
-    }
-}
+   ========================================================= */
 
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    text-align: left;
+    left: 0 !important;
+  }
+
+  .timeline-dot {
+    left: 0 !important;
+  }
+}
