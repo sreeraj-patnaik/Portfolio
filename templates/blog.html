@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeraj Dabbiru | My Blog</title>
+    <meta name="description" content="Read blog posts by Sreeraj Dabbiru on technology, writing, and personal experiences.">
+    <meta name="keywords" content="Sreeraj Dabbiru, blog, articles, technology, writing, LWC, Minecraft">
+    <meta name="author" content="Sreeraj Dabbiru">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">Sreeraj Dabbiru</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="blog.html" class="nav-link btn-secondary active">My Blog</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <span class="logo">Sreeraj Dabbiru</span>
+            <i class="fas fa-times close-mobile-menu"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+            <li><a href="index.html#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="index.html#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="blog.html" class="mobile-nav-link btn-secondary active">My Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section section-padding">
+        <div class="container">
+            <h1 class="section-title animate-on-scroll">My Blog</h1>
+
+            <div class="blog-posts-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-post-card animate-on-scroll">
+                    <div class="card-content">
+                        <h2>From Wheels to Wings, The story of Clubs revival at Lendi</h2>
+                        <p>
+                            Looking back, I donâ€™t remember every detail. But I remember every emotion. That bus ride didnâ€™t just take us home, it led us to our purpose. This is not a story about me. Not even just about Prudhvi, Dhanush, or our amazing teams. This is a story of what happens when students are trusted. When ideas are not laughed at, but lifted. When education includes expression, not just examination. And thatâ€™s what we created. Not four clubs. But a culture. One that will live long after weâ€™ve passed the torch.
+                        </p>
+                        <a href="From-Wheels-to-Wings-The-story-of-Clubs-revival-at-Lendi.html" class="btn btn-link">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-post-card animate-on-scroll">
+                    <div class="card-content">
+                        <h2>Build a Working Computer in Minecraft to Play Minecraft in Minecraft</h2>
+                        <p>
+                            Redstone is Minecraftâ€™s version of electricity. It powers doors, minecarts, lamps â€” and much more. With Redstone, players have built logic gates, memory units, clocks, and arithmetic circuits. With enough patience and creativity, some have constructed full-blown 8-bit and 16-bit CPUs, complete with RAM, ALUs (Arithmetic Logic Units), and even visual displays â€” all using Redstone.
+                        </p>
+                        <a href="Build-a-Working-Computer-in-Minecraft-to-Play-Minecraft-in-Minecraft.html" class="btn btn-link">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Add more blog posts here as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sreeraj Dabbiru. All rights reserved.</p>
+            <!-- <p class="footer-note">Designed and Developed by BLACKBOX.AI Assistant</p> -->
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
+

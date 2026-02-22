@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeraj Dabbiru | Portfolio</title>
+    <meta name="description"
+        content="Editor-In-Chief @ LWC, Developer, Student, and Writer. View my projects, skills, and resume.">
+    <meta name="keywords"
+        content="Sreeraj Dabbiru, portfolio, developer, student, LWC, LIET, full stack, projects, poetry, editor">
+    <meta name="author" content="Sreeraj Dabbiru">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body> <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container"> <a href="index.html" class="logo">Sreeraj Dabbiru</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="blog.html" class="nav-link btn-secondary">My Blog</a></li>
+                                <li><a href="stories.html" class="nav-link btn-secondary">Writings</a></li>
+
+                <!-- <li><a href="codetech.html" class="nav-link btn-primary">CodeTech YouTube</a></li> -->
+            </ul>
+            <div class="hamburger-menu"> <i class="fas fa-bars"></i> </div>
+        </nav>
+    </header> <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header"> <span class="logo">Sreeraj Dabbiru</span> <i
+                class="fas fa-times close-mobile-menu"></i> </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+            <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="blog.html" class="mobile-nav-link btn-secondary">My Blog</a></li>
+            <!-- <li><a href="codetech.html" class="mobile-nav-link btn-primary">CodeTech YouTube</a></li> -->
+        </ul>
+    </div>
+   <!-- Hero Section -->
+<section id="home" class="hero-section section-padding">
+    <div class="container hero-content">
+        <div class="hero-text animate-on-scroll">
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Sreeraj Dabbiru</span>
+            </h1>
+
+            <p class="hero-bio">
+                Computer Science undergraduate focused on backend systems, data-driven software,
+                and applied problem solving. Currently working with Python-based systems, web
+                backends, and analytical tooling, with growing interests in machine learning,
+                operating systems, and compiler design.
+            </p>
+
+            <p class="hero-intro muted">
+                Vice-Chairperson, ACM Student Chapter Â· Editor-in-Chief, LWC Â· B.Tech CSSE (LIET â€™28)
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Get In Touch <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image animate-on-scroll">
+            <img src="{% static 'images/dp2.jpeg' %}" alt="Sreeraj Dabbiru profile photo">
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+
+        <div class="about-content">
+            <div class="about-text animate-on-scroll">
+
+                <p>
+                    I am a second-year Computer Science and Systems Engineering undergraduate at LIET,
+                    maintaining a <span class="highlight">9.5 GPA</span>, with a strong inclination
+                    toward building reliable, understandable software systems rather than
+                    surface-level applications.
+                </p>
+
+                <p>
+                    My primary technical work revolves around <span class="highlight">Python-based
+                    backend development</span>, academic systems, data processing pipelines, and
+                    structured problem solving. I enjoy working close to the logic layer â€” designing
+                    data models, workflows, and constraints that make software predictable and
+                    maintainable.
+                </p>
+
+                <p>
+                    I am particularly interested in <span class="highlight">machine learning as a
+                    tool</span>, not a buzzword â€” focusing on how models integrate with systems,
+                    how data flows are validated, and how results can be interpreted responsibly.
+                    Alongside this, I am developing a long-term interest in
+                    <span class="highlight">operating systems and compiler internals</span>.
+                </p>
+
+                <p>
+                    As <b>Vice-Chairperson of the ACM Student Chapter</b>, I work on creating
+                    technically meaningful environments â€” encouraging students to move beyond
+                    syntax toward understanding systems, trade-offs, and design decisions.
+                </p>
+
+                <p>
+                    As <b>Editor-in-Chief of the Lendi Write Club</b>, I focus on clarity of thought
+                    and communication. Writing, for me, is not separate from engineering â€” it is
+                    how ideas are tested, refined, and made precise. Winning the
+                    <b>District Poetry Competition (Yuva Utsav 2024)</b> reaffirmed this balance
+                    between logic and expression.
+                </p>
+
+                <p>
+                    I value mentoring and discussion. I believe understanding is proven not by
+                    knowing answers, but by being able to explain systems clearly, honestly,
+                    and without shortcuts.
+                </p>
+
+            </div>
+
+            <div class="about-cards animate-on-scroll">
+                <div class="about-card">
+                    <i class="fas fa-graduation-cap icon-large"></i>
+                    <h3>Education</h3>
+                    <p>B.Tech â€” CSSE<br>LIET (2024â€“2028)</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-code icon-large"></i>
+                    <h3>Primary Focus</h3>
+                    <p>Backend Systems & Data-Driven Software</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-users icon-large"></i>
+                    <h3>Leadership</h3>
+                    <p>Vice-Chairperson, ACM<br>Editor-in-Chief, LWC</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fas fa-brain icon-large"></i>
+                    <h3>Interests</h3>
+                    <p>Machine Learning Â· OS Â· Compilers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Skills Section -->
+<section id="skills" class="skills-section section-padding">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Technical Skills</h2>
+
+        <!-- Programming & Core Languages -->
+        <h3 class="skills-subtitle animate-on-scroll">Programming & Core Languages</h3>
+        <div class="skills-grid">
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-python skill-icon"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-c skill-icon"></i>
+                <p>C</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-java skill-icon"></i>
+                <p>Java</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-js skill-icon"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-database skill-icon"></i>
+                <p>SQL</p>
+            </div>
+        </div>
+
+        <!-- Backend & Web Technologies -->
+        <h3 class="skills-subtitle animate-on-scroll">Backend & Web Technologies</h3>
+        <div class="skills-grid">
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-server skill-icon"></i>
+                <p>Django</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-network-wired skill-icon"></i>
+                <p>REST APIs</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-html5 skill-icon"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fab fa-bootstrap skill-icon"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-paint-brush skill-icon"></i>
+                <p>Tailwind CSS</p>
+            </div>
+        </div>
+
+        <!-- Data, ML & Analytics -->
+        <h3 class="skills-subtitle animate-on-scroll">Data, Analytics & Applied ML</h3>
+        <div class="skills-grid">
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-calculator skill-icon"></i>
+                <p>NumPy</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-table skill-icon"></i>
+                <p>Pandas</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <p>Matplotlib</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-chart-area skill-icon"></i>
+                <p>Plotly</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-brain skill-icon"></i>
+                <p>Generative AI (Applied)</p>
+            </div>
+        </div>
+
+        <!-- Systems, Tools & Engineering Practices -->
+        <h3 class="skills-subtitle animate-on-scroll">Systems, Tools & Engineering Practices</h3>
+        <div class="skills-grid">
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-code-branch skill-icon"></i>
+                <p>Git & GitHub</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-terminal skill-icon"></i>
+                <p>Linux & CLI</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-project-diagram skill-icon"></i>
+                <p>Data Structures & Algorithms</p>
+            </div>
+            <div class="skill-item animate-on-scroll">
+                <i class="fas fa-pencil-ruler skill-icon"></i>
+                <p>UI/UX & Figma</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Certifications Section -->
+   Journey/Timeline Section -->
+
+
+    <section id="projects" class="projects-section section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Selected Projects</h2>
+        <p class="section-description animate-on-scroll">
+            A focused selection of academic, system-oriented, and applied software projects,
+            ordered by depth of engineering and problem complexity.
+        </p>
+
+        <div class="projects-grid">
+
+            <!-- MAPSS â€“ Smart India Hackathon -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/mapss.jpg' %}" alt="MAPSS â€“ Mental and Psychological Student Support System">
+                <div class="card-content">
+                    <span class="highlight">Smart India Hackathon</span>
+                    <h3>MAPSS</h3>
+                    <p>
+                        Mental and Psychological Student Support System integrating data analysis
+                        and AI-assisted insights to monitor, assess, and support student well-being
+                        at scale. Designed as a decision-support system rather than a diagnostic tool.
+                    </p>
+                    <p class="hero-intro muted">
+                        Python Â· Data Analysis Â· AI-assisted Systems Â· System Design
+                    </p>
+                </div>
+            </div>
+
+            <!-- Amaravati Quantum Valley Hackathon -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/quantum.jpg' %}" alt="Quantum Backend Analytics Dashboard">
+                <div class="card-content">
+                    <span class="highlight">Amaravati Quantum Valley Hackathon</span>
+                    <h3>Quantum Backend Analytics Dashboard</h3>
+                    <p>
+                        A dashboard aggregating and analyzing IBM Quantum backend metadata.
+                        Scrapes backend APIs, stores execution logs, and derives quantitative
+                        and qualitative metrics to rank optimal quantum backends for users.
+                    </p>
+                    <p class="hero-intro muted">
+                        Python Â· API Analysis Â· Data Engineering Â· Quantitative Metrics
+                    </p>
+                </div>
+            </div>
+
+            <!-- Campus LMS -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/lms.jpg' %}" alt="Campus Learning Management System">
+                <div class="card-content">
+                    <span class="highlight">Academic Systems</span>
+                    <h3>Campus LMS</h3>
+                    <p>
+                        A campus-oriented Learning Management System supporting course materials,
+                        announcements, structured content delivery, and controlled academic workflows.
+                    </p>
+                    <p class="hero-intro muted">
+                        Django Â· Backend Architecture Â· Role-Based Access
+                    </p>
+                </div>
+            </div>
+
+            <!-- Exam Management -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/exam.jpg' %}" alt="Exam Management System">
+                <div class="card-content">
+                    <span class="highlight">Academic Systems</span>
+                    <h3>Exam Management System</h3>
+                    <p>
+                        A structured system for handling examinations, evaluations, and academic records,
+                        designed with consistency, data integrity, and institutional workflows in mind.
+                    </p>
+                    <p class="hero-intro muted">
+                        Python Â· Database Design Â· Academic Automation
+                    </p>
+                </div>
+            </div>
+
+            <!-- Classroom Page -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/classroom.jpg' %}" alt="Classroom Page">
+                <div class="card-content">
+                    <span class="highlight">Frontend + Utility</span>
+                    <h3>Classroom Page</h3>
+                    <p>
+                        A clean classroom information portal for announcements, resources,
+                        and internal communication within an academic cohort.
+                    </p>
+                    <p class="hero-intro muted">
+                        HTML Â· CSS Â· JavaScript Â· UI Structure
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hogwarts Django -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/hogwarts-django.jpg' %}" alt="Hogwarts Django Backend">
+                <div class="card-content">
+                    <span class="highlight">Backend Systems</span>
+                    <h3>Hogwarts University â€“ Django</h3>
+                    <p>
+                        A full-stack backend-powered university website implementing authentication,
+                        structured data models, and administrative workflows using Django.
+                    </p>
+                    <p class="hero-intro muted">
+                        Django Â· MVC Architecture Â· Backend Engineering
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hogwarts Frontend -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/c2.PNG' %}" alt="Hogwarts Frontend Website">
+                <div class="card-content">
+                    <span class="highlight">Frontend</span>
+                    <h3>Hogwarts Website</h3>
+                    <p>
+                        A frontend-focused fictional university website emphasizing layout,
+                        information hierarchy, and visual storytelling.
+                    </p>
+                    <p class="hero-intro muted">
+                        HTML Â· CSS Â· Responsive Design
+                    </p>
+                </div>
+            </div>
+
+            <!-- CampusSwap -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/campuswap.jpg' %}" alt="CampusSwap">
+                <div class="card-content">
+                    <span class="highlight">Utility Platform</span>
+                    <h3>CampusSwap</h3>
+                    <p>
+                        A campus-centric exchange and lost-and-found platform designed to
+                        facilitate peer-to-peer item discovery within an institution.
+                    </p>
+                    <p class="hero-intro muted">
+                        Web Design Â· Information Systems
+                    </p>
+                </div>
+            </div>
+
+            <!-- Utilities -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/tools.jpg' %}" alt="Utility Tools">
+                <div class="card-content">
+                    <span class="highlight">Utilities</span>
+                    <h3>Academic & Personal Utilities</h3>
+                    <p>
+                        A collection of focused tools including GPA Calculator, Personal Expense Tracker,
+                        and Data Cleaner, built to solve narrowly defined, real-world problems efficiently.
+                    </p>
+                    <p class="hero-intro muted">
+                        Python Â· Data Processing Â· Problem Solving
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="project-card animate-on-scroll">
+                <img src="{% static 'images/portfolio.jpg' %}" alt="Portfolio Website">
+                <div class="card-content">
+                    <span class="highlight">Meta</span>
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        A continuously evolving personal portfolio designed as a technical,
+                        academic, and narrative archive rather than a static showcase.
+                    </p>
+                    <p class="hero-intro muted">
+                        System Design Â· Information Architecture
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    
+    <section id="journey" class="journey-section section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Aug 2025</h3>
+                        <p>Apointed as the Vice-Chairperson of ACM Student chapter - Lendi</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2025</h3>
+                        <p>Assumed Reins as The Editor-in-Chief of the LWC</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Jan 2025</h3>
+                        <p>Completed First Semester of my BTech with 9.7 CGPA</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Dec 2024</h3>
+                        <p>Selected as an Interim President for the Lendi Write Club</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>Oct 2024</h3>
+                        <p>Awarded First in District-level Poetry Competition by SETWEZ</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2024</h3>
+                        <p>Completed Intermediate with Distinction in Sri Chaitanya Jr College</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <h3>May 2022</h3>
+                        <p>Completed SSC with Distinction in Sri Chaitanya Techno School â€“ Palasa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Projects Section -->
+
+          <section id="certifications" class="certifications-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">My Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card animate-on-scroll"> <i class="fas fa-award cert-icon"></i>
+                    <h3>Introduction to Data Science</h3>
+                    <p>Completed course by INFOSYS SPRINGBOARD.</p> <a
+                        href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_introduction-to-data-science-activity-7334585354504609792-SjIL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
+                        target="_blank" class="btn btn-link">View Credential <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll"> <i class="fas fa-award cert-icon"></i>
+                    <h3>Java Full Stack with React JS & AI</h3>
+                    <p>NSTTP-2K24 by LIET in collaboration with Brainovision Solutions India Pvt. Ltd. and AICTE.</p> <a
+                        href="#" target="_blank" class="btn btn-link">View Credential <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll"> <i class="fas fa-award cert-icon"></i>
+                    <h3>Web Full Stack Developer Virtual Internship</h3>
+                    <p>Completed virtual internship supported by EduSkills and AICTE.</p> <a
+                        href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
+                        target="_blank" class="btn btn-link">View Credential <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll"> <i class="fas fa-award cert-icon"></i>
+                    <h3>Cyber Security Virtual Internship</h3>
+                    <p>Completed virtual internship supported by Paloalto Networks, EduSkills and AICTE.</p> <a
+                        href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_fullstackdeveloper-internshipmagic-eduskills-activity-7319201425668915200-QATo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
+                        target="_blank" class="btn btn-link">View Credential <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="cert-card animate-on-scroll"> <i class="fas fa-award cert-icon"></i>
+                    <h3>District Level Poetry Competition</h3>
+                    <p>Certificate for standing first in District level Poetry competition.</p> <a
+                        href="https://www.linkedin.com/posts/sreeraj-dabbiru-65bb28262_yeah-an-old-one-forgot-to-share-it-then-activity-7319205243903176704-jzKG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECYP6cBj4VTEHvICxy0PyoM9-OLfcPgVQY"
+                        target="_blank" class="btn btn-link">View Credential <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section> <!--
+  !-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Photo Gallery</h2>
+            <p class="section-description animate-on-scroll">A collection of memorable moments, creative works, and
+                event highlights from my journey.</p>
+            <div class="gallery-container">
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img7.jpeg' %}"
+                            alt="Sreeraj Dabbiru with Dr G Sateesh Reddy">
+                        <div class="gallery-caption">
+                            <h3>With Dr G Sateesh sir</h3>
+                            <p>With one of the greatest scientists and former chairperson of DRDO, Advisor to Defense
+                                Minister Dr G Sateesh Reddy sir.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img9.jpeg' %}"
+                            alt="Sreeraj Dabbiru Hosting Radio Show for LWC">
+                        <div class="gallery-caption">
+                            <h3>Hosting Radio Show for LWC</h3>
+                            <p>Rendering my voice for The Lendi Radio Club.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img10.jpeg' %}"
+                            alt="Sreeraj Dabbiru in the Engineering Chemistry Lab">
+                        <div class="gallery-caption">
+                            <h3>In the Engineering Chemistry Lab</h3>
+                            <p>Playing with Chemicals under careful supervision of faculty.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img1.jpg' %}"
+                            alt="Sreeraj Dabbiru after winning District First in YUVA UTSAV 2024">
+                        <div class="gallery-caption">
+                            <h3>Yuva Utsav 2024</h3>
+                            <p>Capturing the moment after winning the District Poetry Competition.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img2.jpg' %}"
+                            alt="Sreeraj Dabbiru in the Central Library of LIET">
+                        <div class="gallery-caption">
+                            <h3>First time In the Central Library</h3>
+                            <p>Capturing every moment in the very beginning days of my BTech.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img4.jpeg' %}"
+                            alt="Sreeraj Dabbiru Presenting the First Newsletter of LWC">
+                        <div class="gallery-caption">
+                            <h3>Newsletter Launch</h3>
+                            <p>Presenting the First Newsletter of LWC to the Respected Principal sir Dr VV Rama Reddy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll"> <img src="{% static 'images/img6.jpeg' %}"
+                            alt="Sreeraj Dabbiru in Simhachalam Stepsway">
+                        <div class="gallery-caption">
+                            <h3>Simhachalam</h3>
+                            <p>Lost in the Nature's Beauty at Simhachalam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content"> </div>
+            <div class="contact-info animate-on-scroll">
+                <h3>Connect with me!</h3>
+                <p>I'm always open to new opportunities, collaborations, and interesting conversations. Feel free to
+                    reach out!</p>
+                <div class="info-item"> <i class="fas fa-envelope icon-small"></i> <span>sreerajdabbiru@gmail.com</span>
+                    <!-- Replace with actual email --> </div>
+                <div class="info-item"> <i class="fas fa-phone icon-small"></i> <span>+91 9059659477</span>
+                    <!-- Replace with actual phone --> </div>
+                <div class="info-item"> <i class="fas fa-map-marker-alt icon-small"></i> <span>Visakhapatnam,
+                        India</span> <!-- Replace with actual location --> </div>
+                <div class="social-links"> <a href="https://www.linkedin.com/in/sreeraj-dabbiru-65bb28262/"
+                        target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a> <a
+                        href="https://github.com/sreerajdabbiru" target="_blank" class="social-icon"><i
+                            class="fab fa-github"></i></a> <a href="https://www.youtube.com/@sreeraj_dabbiru"
+                        target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <!-- Add more social media links as needed --> </div>
+            </div>
+        </div>
+        </div>
+    </section> <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sreeraj Dabbiru. All rights reserved.</p>
+            <p class="footer-note">Designed and Developed with Passion.</p>
+        </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
